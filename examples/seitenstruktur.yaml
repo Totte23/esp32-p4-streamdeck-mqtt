@@ -1,0 +1,102 @@
+# Seitenplan zum Bearbeiten und Zurückgeben. Noch kein Uploadformat.
+# Einrückung zeigt Unterseiten. Leere Werte bedeuten: Seite ohne weitere Unterseite.
+# IDs entsprechen menu.json; Funktionen, Icons und MQTT sind hier weggelassen.
+# raffstores-2 ist eine Fortsetzungsseite über die linke Weiter-Taste.
+# rollo-alle ist dieselbe Seite, erreichbar über mehrere Menüs.
+
+seitenbaum:
+  hauptmenue:
+    licht:
+      wohnzimmer:
+      esszimmer: # Decke, Küche 1, Küche 2
+      garten: # Vorgarten, Terrasse
+      flur:
+    beschattung:
+      raffstores:
+        raffstore-oben:
+          raffstore-oben-lamellen:
+        raffstore-mitte:
+          raffstore-mitte-lamellen:
+        raffstore-links:
+          raffstore-links-lamellen:
+        raffstore-rechts:
+          raffstore-rechts-lamellen:
+        raffstores-2: # Weiterblättern
+          raffstore-alle:
+      rollos-oben:
+        rollo-room_a:
+        rollo-room_b:
+        rollo-schlaf:
+        rollo-flur:
+      rollos-unten:
+        rollo-kueche:
+        rollo-essen:
+        rollo-alle: # Verweis auf dieselbe Alle-Seite
+      rollo-alle:
+    markise:
+    szenen: # Weihnachten, Sofazeit, Sommer, Schlafenszeit
+
+# Aktuelle linke Tasten: kurz Zurück/Weiter, unten 2 s halten = hauptmenue.
+# Diese Verbindungen sind unabhängig von der Einrückung oben.
+blaettern:
+  hauptmenue: {zurueck: szenen, weiter: licht}
+  licht: {zurueck: hauptmenue, weiter: beschattung}
+  wohnzimmer: {zurueck: licht, weiter: esszimmer}
+  esszimmer: {zurueck: wohnzimmer, weiter: garten}
+  garten: {zurueck: esszimmer, weiter: flur}
+  flur: {zurueck: garten, weiter: licht}
+  beschattung: {zurueck: licht, weiter: markise}
+  raffstores: {zurueck: beschattung, weiter: raffstores-2}
+  raffstores-2: {zurueck: raffstores, weiter: beschattung}
+  raffstore-oben: {zurueck: raffstores, weiter: raffstore-oben-lamellen}
+  raffstore-oben-lamellen: {zurueck: raffstore-oben, weiter: raffstores}
+  raffstore-mitte: {zurueck: raffstores, weiter: raffstore-mitte-lamellen}
+  raffstore-mitte-lamellen: {zurueck: raffstore-mitte, weiter: raffstores}
+  raffstore-links: {zurueck: raffstores, weiter: raffstore-links-lamellen}
+  raffstore-links-lamellen: {zurueck: raffstore-links, weiter: raffstores}
+  raffstore-rechts: {zurueck: raffstores, weiter: raffstore-rechts-lamellen}
+  raffstore-rechts-lamellen: {zurueck: raffstore-rechts, weiter: raffstores}
+  raffstore-alle: {zurueck: raffstores, weiter: raffstores-2}
+  rollos-oben: {zurueck: beschattung, weiter: rollos-unten}
+  rollos-unten: {zurueck: rollos-oben, weiter: beschattung}
+  rollo-room_a: {zurueck: rollos-oben, weiter: rollos-oben}
+  rollo-room_b: {zurueck: rollos-oben, weiter: rollos-oben}
+  rollo-schlaf: {zurueck: rollos-oben, weiter: rollos-oben}
+  rollo-flur: {zurueck: rollos-oben, weiter: rollos-oben}
+  rollo-kueche: {zurueck: rollos-unten, weiter: rollos-unten}
+  rollo-essen: {zurueck: rollos-unten, weiter: rollos-unten}
+  rollo-alle: {zurueck: rollos-unten, weiter: rollos-unten}
+  markise: {zurueck: beschattung, weiter: szenen}
+  szenen: {zurueck: markise, weiter: hauptmenue}
+
+# Kurztitel auf dem Display.
+anzeigetitel:
+  hauptmenue: "Hauptmenü"
+  licht: "Licht"
+  wohnzimmer: "Wohnz."
+  esszimmer: "Essz."
+  garten: "Garten"
+  flur: "Flur"
+  beschattung: "Schatten"
+  raffstores: "Raffst."
+  raffstores-2: "Raffst. 2"
+  raffstore-oben: "Raffst. oben"
+  raffstore-oben-lamellen: "Lamellen oben"
+  raffstore-mitte: "Raffst. mitte"
+  raffstore-mitte-lamellen: "Lamellen mitte"
+  raffstore-links: "Raffst. links"
+  raffstore-links-lamellen: "Lamellen links"
+  raffstore-rechts: "Raffst. rechts"
+  raffstore-rechts-lamellen: "Lamellen rechts"
+  raffstore-alle: "Raffst. alle"
+  rollos-oben: "Rollos oben"
+  rollos-unten: "Rollos unten"
+  rollo-room_a: "Rollo RoomA"
+  rollo-room_b: "Rollo RoomB"
+  rollo-schlaf: "Rollo Schlaf"
+  rollo-flur: "Rollo Flur"
+  rollo-kueche: "Rollo Küche"
+  rollo-essen: "Rollo Essen"
+  rollo-alle: "Rollo Alle"
+  markise: "Markise"
+  szenen: "Szenen"

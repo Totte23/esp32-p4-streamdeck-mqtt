@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stream Deck Mini · Piktogramme</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,sans-serif;background:#10141b;color:#eaf0f7}*{box-sizing:border-box}body{margin:0}main{max-width:1120px;margin:auto;padding:30px 22px}header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}h1{font-size:27px;margin:5px 0}h2{font-size:19px;margin:0 0 16px}p{line-height:1.55;color:#aebdd0}small,.eyebrow{color:#98acc2}.eyebrow{letter-spacing:.12em;font-size:12px;text-transform:uppercase}.layout{display:grid;grid-template-columns:340px 1fr;gap:20px}.panel{background:#19212c;border:1px solid #303e50;border-radius:16px;padding:22px;margin-bottom:20px}label{display:block;margin:14px 0 6px;color:#d5e0ed;font-size:14px}input,select,button{font:inherit;border-radius:8px;border:1px solid #43546a;padding:10px;background:#111923;color:inherit;max-width:100%}input[type=text],select{width:100%}input[type=color]{width:65px;height:42px;padding:4px}input[type=file]{width:100%;font-size:12px}button{cursor:pointer;background:#233348}button.primary{background:#76d6bb;color:#08241c;border:0;font-weight:650}button:disabled{opacity:.45;cursor:wait}button:hover:not(:disabled){filter:brightness(1.13)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #76d6bb;outline-offset:2px}.preview{display:flex;gap:18px;align-items:center;margin:20px 0}.preview canvas{width:104px;height:104px;border-radius:13px;background:#080b10;border:1px solid #43546a}.preview p{font-size:13px}.keys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.key{background:#101721;border-radius:12px;padding:12px;text-align:center}.key canvas{width:80px;height:80px;border-radius:9px;display:block;margin:12px auto}.key label{margin:0;font-weight:600}.key select{font-size:12px;padding:8px}.key button{margin-top:9px;width:100%;font-size:13px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:12px}.icon{padding:12px;background:#101721;border-radius:10px;min-width:0}.icon canvas{width:64px;height:64px;display:block;margin:auto}.icon strong{font-size:12px;display:block;overflow-wrap:anywhere;margin:10px 0}.icon button{width:100%;font-size:12px;padding:7px}.status{padding:12px 16px;border-radius:10px;background:#243447;margin-bottom:22px;min-height:45px;font-size:14px}.status.error{background:#522d35;color:#ffdae0}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.muted{font-size:13px;color:#aebdd0}.empty{padding:16px 0}.full{width:100%}@media(max-width:760px){.layout{grid-template-columns:1fr}main{padding:20px 12px}.panel{padding:16px}.keys{gap:7px}.key{padding:8px 5px}.key canvas{width:64px;height:64px}header{align-items:flex-start}h1{font-size:23px}}
+</style>
+<script type="module" src="/app.js"></script>
+</head>
+<body><main>
+<header><div><span class="eyebrow">ESP32-P4 · Stream Deck Mini</span><h1>Dein Smart-Home-Menü</h1><small>Seiten, Beschriftungen, Farben und Piktogramme verwalten.</small></div><button id="refresh">Aktualisieren</button></header>
+<div id="status" class="status" role="status" aria-live="polite">Verbindung wird hergestellt …</div>
+<section class="panel"><h2>Menü bearbeiten</h2>
+<p>Links oben blättert weiter, links unten zurück. Die vier rechten Tasten kommen aus der JSON-Datei. Vorschau-Tasten senden keine Befehle.</p>
+<label for="menu-file">JSON-Datei importieren</label><input id="menu-file" type="file" accept=".json,application/json">
+<label for="menu-json">menu.json</label><textarea id="menu-json" spellcheck="false" rows="14" style="width:100%;background:#101721;color:#eaf0f7;padding:12px;font:13px monospace;border:1px solid #43546a;border-radius:8px"></textarea>
+<div class="row"><button id="menu-check">Prüfen &amp; Vorschau</button><button id="menu-save" class="primary">Menü aktivieren</button><button id="menu-download">JSON herunterladen</button><a href="/menu.schema.json" download>Schema für VS Code</a></div>
+<p id="menu-status" role="status" aria-live="polite"></p>
+<div class="row"><label for="menu-page">Seite</label><select id="menu-page" style="width:auto"></select><label for="menu-state">Vorschau-Zustand</label><select id="menu-state" style="width:auto"><option>unknown</option><option>off</option><option>on</option></select><label for="menu-value">Wert</label><input id="menu-value" value="45" style="width:80px"></div>
+<div id="menu-preview" class="keys" style="max-width:360px;margin:20px auto"></div>
+</section>
+<div class="layout">
+<section class="panel"><h2>Piktogramm hinzufügen</h2><p class="muted">Mehrfarbige SVGs und PNGs werden automatisch auf 80 × 80 Pixel eingepasst. Die Originaldatei bleibt auf deinem Rechner.</p>
+<label for="file">Datei auswählen</label><input id="file" type="file" accept=".svg,.png,image/svg+xml,image/png">
+<label for="name">Icon-ID</label><input id="name" type="text" maxlength="32" pattern="[A-Za-z0-9_-]{1,32}" placeholder="z. B. lampe_an" autocomplete="off"><small>Buchstaben, Zahlen, Unterstrich und Bindestrich.</small>
+<label><input id="transparent" type="checkbox" checked> Transparenz für wechselnde Menüfarben erhalten</label>
+<label for="background">Vorschau-Hintergrund</label><input id="background" type="color" value="#18222f">
+<div class="preview"><canvas id="preview" width="80" height="80" aria-label="Bildvorschau"></canvas><p>Farben bleiben erhalten. Transparente Bereiche zeigen später die Hintergrundfarbe der Taste.</p></div>
+<button id="upload" class="primary full" disabled>Im Stream Deck speichern</button><p id="space" class="muted">Speicher wird geprüft …</p>
+</section>
+<div><section class="panel"><h2>Helligkeit</h2><div class="row"><input aria-label="Helligkeit in Prozent" id="brightness" type="range" min="0" max="100" value="30"><output id="percent">30 %</output><button id="set-brightness">Übernehmen</button></div><p class="muted">Gilt bis zum nächsten Neustart.</p></section></div>
+</div>
+<section class="panel"><div class="toolbar"><h2>Gespeicherte Piktogramme</h2><small id="count">0 / 64</small></div><div id="gallery" class="gallery"></div></section>
+<footer class="muted">Lokale Verwaltung im eigenen WLAN · Uploads benötigen keinen erneuten Firmware- oder Filesystem-Build.</footer>
+</main></body></html>

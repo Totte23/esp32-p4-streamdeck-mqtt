@@ -1,0 +1,1699 @@
+{
+  "$schema": "menu.schema.json",
+  "version": 1,
+  "startPage": "hauptmenue",
+  "pages": {
+    "hauptmenue": {
+      "title": "Hauptmenü",
+      "previous": "szenen",
+      "next": "licht",
+      "buttons": {
+        "topLeft": {
+          "id": "licht",
+          "labels": {
+            "bottom": "Licht"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "licht"
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "beschattung",
+          "labels": {
+            "bottom": "Schatten"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "beschattung"
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "markise",
+          "labels": {
+            "bottom": "Markise"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "markise"
+          },
+          "icon": "color_markise.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "szenen",
+          "labels": {
+            "bottom": "Szenen"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "szenen"
+          },
+          "icon": "color_szenen.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "licht": {
+      "title": "Licht",
+      "previous": "hauptmenue",
+      "next": "beschattung",
+      "buttons": {
+        "topLeft": {
+          "id": "wohnzimmer",
+          "labels": {
+            "bottom": "Wohnz."
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "wohnzimmer"
+          },
+          "icon": "color_wohnzimmer.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "esszimmer",
+          "labels": {
+            "bottom": "Essz."
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "esszimmer"
+          },
+          "icon": "color_esszimmer.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "terrasse",
+          "labels": {
+            "bottom": "Garten"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "garten"
+          },
+          "icon": "color_garten.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "flur",
+          "labels": {
+            "bottom": "Flur"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "flur"
+          },
+          "icon": "color_flur.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "wohnzimmer": {
+      "title": "Wohnz.",
+      "previous": "licht",
+      "next": "esszimmer",
+      "buttons": {
+        "topLeft": {
+          "id": "decke",
+          "labels": {
+            "bottom": "Decke"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "licht.wohnzimmer.decke",
+            "action": "toggle"
+          },
+          "state": "licht.wohnzimmer.decke",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
+              "center": "AN"
+            }
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "topRight": {
+          "id": "leselampe",
+          "labels": {
+            "bottom": "Lesel."
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "licht.wohnzimmer.leselampe",
+            "action": "toggle"
+          },
+          "state": "licht.wohnzimmer.leselampe",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
+              "center": "AN"
+            }
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomLeft": {
+          "id": "sofazeit",
+          "labels": {
+            "bottom": "Sofazeit"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "szene.sofazeit",
+            "action": "toggle"
+          },
+          "state": "szene.sofazeit",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#705000",
+              "textColor": "#FFFFFF",
+              "center": "AN"
+            }
+          },
+          "icon": "color_wohnzimmer.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomRight": null
+      }
+    },
+    "esszimmer": {
+      "title": "Essz.",
+      "previous": "wohnzimmer",
+      "next": "garten",
+      "buttons": {
+        "topLeft": {
+          "id": "decke",
+          "labels": {
+            "bottom": "Decke"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "licht.esszimmer.decke",
+            "action": "toggle"
+          },
+          "state": "licht.esszimmer.decke",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
+              "center": "AN"
+            }
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "topRight": {
+          "id": "kuechenlicht-1",
+          "labels": {
+            "bottom": "Küche 1"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "licht.kueche.licht1",
+            "action": "toggle"
+          },
+          "state": "licht.kueche.licht1",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
+              "center": "AN"
+            }
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomLeft": {
+          "id": "kuechenlicht-2",
+          "labels": {
+            "bottom": "Küche 2"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "licht.kueche.licht2",
+            "action": "toggle"
+          },
+          "state": "licht.kueche.licht2",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
+              "center": "AN"
+            }
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomRight": null
+      }
+    },
+    "garten": {
+      "title": "Garten",
+      "previous": "esszimmer",
+      "next": "flur",
+      "buttons": {
+        "topLeft": {
+          "id": "vorgarten",
+          "labels": {
+            "bottom": "Vorgarten"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "licht.vorgarten",
+            "action": "toggle"
+          },
+          "state": "licht.vorgarten",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
+              "center": "AN"
+            }
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "topRight": {
+          "id": "licht",
+          "labels": {
+            "bottom": "Terrasse"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "licht.terrasse",
+            "action": "toggle"
+          },
+          "state": "licht.terrasse",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
+              "center": "AN"
+            }
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomLeft": null,
+        "bottomRight": null
+      }
+    },
+    "flur": {
+      "title": "Flur",
+      "previous": "garten",
+      "next": "licht",
+      "buttons": {
+        "topLeft": {
+          "id": "licht",
+          "labels": {
+            "bottom": "Flur"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "licht.flur",
+            "action": "toggle"
+          },
+          "state": "licht.flur",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
+              "center": "AN"
+            }
+          },
+          "icon": "color_bulb_orange.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "topRight": null,
+        "bottomLeft": null,
+        "bottomRight": null
+      }
+    },
+    "beschattung": {
+      "title": "Schatten",
+      "previous": "licht",
+      "next": "markise",
+      "buttons": {
+        "topLeft": {
+          "id": "raffstores",
+          "labels": {
+            "bottom": "Raffst."
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstores"
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "rollos-oben",
+          "labels": {
+            "bottom": "R. oben"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollos-oben"
+          },
+          "icon": "color_rollo.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "rollos-unten",
+          "labels": {
+            "bottom": "R. unten"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollos-unten"
+          },
+          "icon": "color_rollo.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "alle-rollos",
+          "labels": {
+            "bottom": "R. alle"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollo-alle"
+          },
+          "icon": "color_home.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "raffstores": {
+      "title": "Raffst.",
+      "previous": "beschattung",
+      "next": "raffstores-2",
+      "buttons": {
+        "topLeft": {
+          "id": "oben",
+          "labels": {
+            "bottom": "Oben"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-oben"
+          },
+          "state": "raffstore.oben",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            }
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "topRight": {
+          "id": "mitte",
+          "labels": {
+            "bottom": "Mitte"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-mitte"
+          },
+          "state": "raffstore.mitte",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            }
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomLeft": {
+          "id": "links",
+          "labels": {
+            "bottom": "Links"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-links"
+          },
+          "state": "raffstore.links",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            }
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomRight": {
+          "id": "rechts",
+          "labels": {
+            "bottom": "Rechts"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-rechts"
+          },
+          "state": "raffstore.rechts",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            }
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 32,
+          "iconY": 3
+        }
+      }
+    },
+    "raffstores-2": {
+      "title": "Raffst. 2",
+      "previous": "raffstores",
+      "next": "beschattung",
+      "buttons": {
+        "topLeft": {
+          "id": "alle",
+          "labels": {
+            "bottom": "Alle"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-alle"
+          },
+          "icon": "color_home.png",
+          "iconSize": 48
+        },
+        "topRight": null,
+        "bottomLeft": null,
+        "bottomRight": null
+      }
+    },
+    "raffstore-oben": {
+      "title": "Raffst. oben",
+      "previous": "raffstores",
+      "next": "raffstore-oben-lamellen",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.oben",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.oben",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.oben",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "lamellen",
+          "labels": {
+            "bottom": "Lamellen"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-oben-lamellen"
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "raffstore-oben-lamellen": {
+      "title": "Lamellen oben",
+      "previous": "raffstore-oben",
+      "next": "raffstores",
+      "buttons": {
+        "topLeft": {
+          "id": "schritt--",
+          "labels": {
+            "bottom": "Schritt +"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.oben",
+            "action": "slatUp"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "schritt--",
+          "labels": {
+            "bottom": "Schritt -"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.oben",
+            "action": "slatDown"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": null,
+        "bottomRight": null
+      }
+    },
+    "raffstore-mitte": {
+      "title": "Raffst. mitte",
+      "previous": "raffstores",
+      "next": "raffstore-mitte-lamellen",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.mitte",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.mitte",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.mitte",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "lamellen",
+          "labels": {
+            "bottom": "Lamellen"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-mitte-lamellen"
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "raffstore-mitte-lamellen": {
+      "title": "Lamellen mitte",
+      "previous": "raffstore-mitte",
+      "next": "raffstores",
+      "buttons": {
+        "topLeft": {
+          "id": "schritt--",
+          "labels": {
+            "bottom": "Schritt +"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.mitte",
+            "action": "slatUp"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "schritt--",
+          "labels": {
+            "bottom": "Schritt -"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.mitte",
+            "action": "slatDown"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": null,
+        "bottomRight": null
+      }
+    },
+    "raffstore-links": {
+      "title": "Raffst. links",
+      "previous": "raffstores",
+      "next": "raffstore-links-lamellen",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.links",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.links",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.links",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "lamellen",
+          "labels": {
+            "bottom": "Lamellen"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-links-lamellen"
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "raffstore-links-lamellen": {
+      "title": "Lamellen links",
+      "previous": "raffstore-links",
+      "next": "raffstores",
+      "buttons": {
+        "topLeft": {
+          "id": "schritt--",
+          "labels": {
+            "bottom": "Schritt +"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.links",
+            "action": "slatUp"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "schritt--",
+          "labels": {
+            "bottom": "Schritt -"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.links",
+            "action": "slatDown"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": null,
+        "bottomRight": null
+      }
+    },
+    "raffstore-rechts": {
+      "title": "Raffst. rechts",
+      "previous": "raffstores",
+      "next": "raffstore-rechts-lamellen",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.rechts",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.rechts",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.rechts",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "lamellen",
+          "labels": {
+            "bottom": "Lamellen"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "raffstore-rechts-lamellen"
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "raffstore-rechts-lamellen": {
+      "title": "Lamellen rechts",
+      "previous": "raffstore-rechts",
+      "next": "raffstores",
+      "buttons": {
+        "topLeft": {
+          "id": "schritt--",
+          "labels": {
+            "bottom": "Schritt +"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.rechts",
+            "action": "slatUp"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "schritt--",
+          "labels": {
+            "bottom": "Schritt -"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.rechts",
+            "action": "slatDown"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": null,
+        "bottomRight": null
+      }
+    },
+    "raffstore-alle": {
+      "title": "Raffst. alle",
+      "previous": "raffstores",
+      "next": "raffstores-2",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.alle",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.alle",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.alle",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "kippen",
+          "labels": {
+            "bottom": "Kippen"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "raffstore.alle",
+            "action": "tilt"
+          },
+          "icon": "color_shutter.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "rollos-oben": {
+      "title": "Rollos oben",
+      "previous": "beschattung",
+      "next": "rollos-unten",
+      "buttons": {
+        "topLeft": {
+          "id": "room_a",
+          "labels": {
+            "bottom": "RoomA"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollo-room_a"
+          },
+          "state": "rollo.room_a",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            },
+            "mixed": {
+              "background": "#35495E",
+              "center": "{value} %"
+            }
+          },
+          "icon": "color_child.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "topRight": {
+          "id": "room_b",
+          "labels": {
+            "bottom": "RoomB"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollo-room_b"
+          },
+          "state": "rollo.room_b",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            },
+            "mixed": {
+              "background": "#35495E",
+              "center": "{value} %"
+            }
+          },
+          "icon": "color_child.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomLeft": {
+          "id": "schlaf",
+          "labels": {
+            "bottom": "Schlaf"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollo-schlaf"
+          },
+          "state": "rollo.schlafzimmer",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            },
+            "mixed": {
+              "background": "#35495E",
+              "center": "{value} %"
+            }
+          },
+          "icon": "color_bed.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomRight": {
+          "id": "flur",
+          "labels": {
+            "bottom": "Flur"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollo-flur"
+          },
+          "state": "rollo.flur",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            },
+            "mixed": {
+              "background": "#35495E",
+              "center": "{value} %"
+            }
+          },
+          "icon": "color_flur.png",
+          "iconSize": 32,
+          "iconY": 3
+        }
+      }
+    },
+    "rollos-unten": {
+      "title": "Rollos unten",
+      "previous": "rollos-oben",
+      "next": "beschattung",
+      "buttons": {
+        "topLeft": {
+          "id": "k-che",
+          "labels": {
+            "bottom": "Küche"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollo-kueche"
+          },
+          "state": "rollo.kueche",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            },
+            "mixed": {
+              "background": "#35495E",
+              "center": "{value} %"
+            }
+          },
+          "icon": "color_kueche.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "topRight": {
+          "id": "esszimmer",
+          "labels": {
+            "bottom": "Essz."
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollo-essen"
+          },
+          "state": "rollo.esszimmer",
+          "appearance": {
+            "unknown": {
+              "center": "?"
+            },
+            "position": {
+              "center": "{value} %",
+              "background": "#153A62"
+            },
+            "mixed": {
+              "background": "#35495E",
+              "center": "{value} %"
+            }
+          },
+          "icon": "color_esszimmer.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomLeft": {
+          "id": "alle",
+          "labels": {
+            "bottom": "Alle"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "page": "rollo-alle"
+          },
+          "icon": "color_home.png",
+          "iconSize": 48
+        },
+        "bottomRight": null
+      }
+    },
+    "rollo-room_a": {
+      "title": "Rollo RoomA",
+      "previous": "rollos-oben",
+      "next": "rollos-oben",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.room_a",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.room_a",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.room_a",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": null
+      }
+    },
+    "rollo-room_b": {
+      "title": "Rollo RoomB",
+      "previous": "rollos-oben",
+      "next": "rollos-oben",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.room_b",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.room_b",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.room_b",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": null
+      }
+    },
+    "rollo-schlaf": {
+      "title": "Rollo Schlaf",
+      "previous": "rollos-oben",
+      "next": "rollos-oben",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.schlafzimmer",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.schlafzimmer",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.schlafzimmer",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": null
+      }
+    },
+    "rollo-flur": {
+      "title": "Rollo Flur",
+      "previous": "rollos-oben",
+      "next": "rollos-oben",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.flur",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.flur",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.flur",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": null
+      }
+    },
+    "rollo-kueche": {
+      "title": "Rollo Küche",
+      "previous": "rollos-unten",
+      "next": "rollos-unten",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.kueche",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.kueche",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.kueche",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": null
+      }
+    },
+    "rollo-essen": {
+      "title": "Rollo Essen",
+      "previous": "rollos-unten",
+      "next": "rollos-unten",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.esszimmer",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.esszimmer",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.esszimmer",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": null
+      }
+    },
+    "rollo-alle": {
+      "title": "Rollo Alle",
+      "previous": "rollos-unten",
+      "next": "rollos-unten",
+      "buttons": {
+        "topLeft": {
+          "id": "hoch",
+          "labels": {
+            "bottom": "Hoch"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.alle",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "runter",
+          "labels": {
+            "bottom": "Runter"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.alle",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "rollo.alle",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": null
+      }
+    },
+    "markise": {
+      "title": "Markise",
+      "previous": "beschattung",
+      "next": "szenen",
+      "buttons": {
+        "topLeft": {
+          "id": "einfahren",
+          "labels": {
+            "bottom": "Ein"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "markise.terrasse",
+            "action": "up"
+          },
+          "icon": "color_up.png",
+          "iconSize": 48
+        },
+        "topRight": {
+          "id": "ausfahren",
+          "labels": {
+            "bottom": "Aus"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "markise.terrasse",
+            "action": "down"
+          },
+          "icon": "color_down.png",
+          "iconSize": 48
+        },
+        "bottomLeft": {
+          "id": "stopp",
+          "labels": {
+            "bottom": "Stopp"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "markise.terrasse",
+            "action": "stop"
+          },
+          "icon": "color_stop.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "sommer",
+          "labels": {
+            "bottom": "Sommer"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "szene.sommerbeschattung",
+            "action": "trigger"
+          },
+          "icon": "color_sun.png",
+          "iconSize": 48
+        }
+      }
+    },
+    "szenen": {
+      "title": "Szenen",
+      "previous": "markise",
+      "next": "hauptmenue",
+      "buttons": {
+        "topLeft": {
+          "id": "weihnachten",
+          "labels": {
+            "bottom": "Weihn."
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "szene.weihnachten",
+            "action": "toggle"
+          },
+          "state": "szene.weihnachten",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#705000",
+              "textColor": "#FFFFFF",
+              "center": "AN"
+            }
+          },
+          "icon": "color_christmas.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "topRight": {
+          "id": "sofazeit",
+          "labels": {
+            "bottom": "Sofazeit"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "szene.sofazeit",
+            "action": "toggle"
+          },
+          "state": "szene.sofazeit",
+          "appearance": {
+            "unknown": {
+              "background": "#333333",
+              "center": "?"
+            },
+            "off": {
+              "background": "#18222F",
+              "center": "AUS"
+            },
+            "on": {
+              "background": "#705000",
+              "textColor": "#FFFFFF",
+              "center": "AN"
+            }
+          },
+          "icon": "color_wohnzimmer.png",
+          "iconSize": 32,
+          "iconY": 3
+        },
+        "bottomLeft": {
+          "id": "sommer",
+          "labels": {
+            "bottom": "Sommer"
+          },
+          "fontSize": 8,
+          "onPress": {
+            "entity": "szene.sommerbeschattung",
+            "action": "trigger"
+          },
+          "icon": "color_sun.png",
+          "iconSize": 48
+        },
+        "bottomRight": {
+          "id": "schlafenszeit",
+          "labels": {
+            "bottom": "Schlafen"
+          },
+          "fontSize": 8,
+          "icon": "color_bed.png",
+          "iconSize": 48,
+          "onPress": {
+            "entity": "szene.schlafenszeit",
+            "action": "trigger"
+          }
+        }
+      }
+    }
+  }
+}

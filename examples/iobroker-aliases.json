@@ -1,0 +1,1137 @@
+{
+  "version": 1,
+  "mqttAdapter": "mqtt.0",
+  "topicPrefix": "streamdeck/mini",
+  "commandState": "mqtt.0.streamdeck.mini.command",
+  "dedupState": "0_userdata.0.streamdeck.mini.seenRequests",
+  "devices": {
+    "licht.wohnzimmer.decke": {
+      "kind": "switch",
+      "read": [
+        "alias.0.example.point_028"
+      ],
+      "write": "alias.0.example.point_028",
+      "unreach": [
+        "alias.0.example.point_004"
+      ]
+    },
+    "licht.wohnzimmer.leselampe": {
+      "kind": "switch",
+      "read": [
+        "alias.0.example.point_118"
+      ],
+      "write": "alias.0.example.point_118",
+      "unreach": [
+        "alias.0.example.point_115"
+      ]
+    },
+    "licht.esszimmer.decke": {
+      "kind": "switch",
+      "read": [
+        "alias.0.example.point_034"
+      ],
+      "write": "alias.0.example.point_034",
+      "unreach": [
+        "alias.0.example.point_011"
+      ]
+    },
+    "licht.terrasse": {
+      "kind": "switch",
+      "read": [
+        "alias.0.example.point_101"
+      ],
+      "write": "alias.0.example.point_101",
+      "unreach": [
+        "alias.0.example.point_061"
+      ]
+    },
+    "licht.flur": {
+      "kind": "switch",
+      "read": [
+        "alias.0.example.point_117"
+      ],
+      "write": "alias.0.example.point_117",
+      "unreach": [
+        "alias.0.example.point_111"
+      ]
+    },
+    "szene.sofazeit": {
+      "kind": "scene",
+      "read": [
+        "alias.0.example.point_116"
+      ],
+      "write": "alias.0.example.point_116",
+      "note": "Bestehender logischer Szenenzustand (live ack=false); wird als Szenenflag angezeigt, nicht als bestätigter Zustand aller Lampen."
+    },
+    "szene.weihnachten": {
+      "kind": "scene",
+      "read": [
+        "alias.0.example.point_113"
+      ],
+      "write": "alias.0.example.point_113",
+      "note": "Bestehender logischer Szenenzustand (live ack=false); wird als Szenenflag angezeigt, nicht als bestätigter Zustand aller Lampen."
+    },
+    "szene.sommerbeschattung": {
+      "kind": "trigger",
+      "actions": {
+        "trigger": [
+          {
+            "id": "alias.0.example.point_044",
+            "value": true
+          }
+        ]
+      }
+    },
+    "rollo.room_a": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_075",
+        "alias.0.example.point_073"
+      ],
+      "unreach": [
+        "alias.0.example.point_070",
+        "alias.0.example.point_071"
+      ],
+      "position": [
+        "alias.0.example.point_112",
+        "alias.0.example.point_114"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_107",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_099",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_086",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_093",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_095",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_100",
+            "value": true
+          }
+        ]
+      }
+    },
+    "rollo.room_b": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_068",
+        "alias.0.example.point_072"
+      ],
+      "unreach": [
+        "alias.0.example.point_051",
+        "alias.0.example.point_055"
+      ],
+      "position": [
+        "alias.0.example.point_108",
+        "alias.0.example.point_105"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_091",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_084",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_079",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_080",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_083",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_082",
+            "value": true
+          }
+        ]
+      }
+    },
+    "rollo.schlafzimmer": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_039"
+      ],
+      "unreach": [
+        "alias.0.example.point_029"
+      ],
+      "position": [
+        "alias.0.example.point_057"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_046",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_041",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_043",
+            "value": true
+          }
+        ]
+      }
+    },
+    "rollo.flur": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_062"
+      ],
+      "unreach": [
+        "alias.0.example.point_047"
+      ],
+      "position": [
+        "alias.0.example.point_094"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_074",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_065",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_078",
+            "value": true
+          }
+        ]
+      }
+    },
+    "rollo.kueche": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_063",
+        "alias.0.example.point_064"
+      ],
+      "unreach": [
+        "alias.0.example.point_049",
+        "alias.0.example.point_058"
+      ],
+      "position": [
+        "alias.0.example.point_106",
+        "alias.0.example.point_109"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_088",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_087",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_076",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_077",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_089",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_092",
+            "value": true
+          }
+        ]
+      }
+    },
+    "rollo.esszimmer": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_042",
+        "alias.0.example.point_040"
+      ],
+      "unreach": [
+        "alias.0.example.point_035",
+        "alias.0.example.point_036"
+      ],
+      "position": [
+        "alias.0.example.point_069",
+        "alias.0.example.point_067"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_059",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_052",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_048",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_045",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_060",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_053",
+            "value": true
+          }
+        ]
+      }
+    },
+    "rollo.alle": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_075",
+        "alias.0.example.point_073",
+        "alias.0.example.point_068",
+        "alias.0.example.point_072",
+        "alias.0.example.point_039",
+        "alias.0.example.point_062",
+        "alias.0.example.point_063",
+        "alias.0.example.point_064",
+        "alias.0.example.point_042",
+        "alias.0.example.point_040"
+      ],
+      "unreach": [
+        "alias.0.example.point_070",
+        "alias.0.example.point_071",
+        "alias.0.example.point_051",
+        "alias.0.example.point_055",
+        "alias.0.example.point_029",
+        "alias.0.example.point_047",
+        "alias.0.example.point_049",
+        "alias.0.example.point_058",
+        "alias.0.example.point_035",
+        "alias.0.example.point_036"
+      ],
+      "position": [
+        "alias.0.example.point_112",
+        "alias.0.example.point_114",
+        "alias.0.example.point_108",
+        "alias.0.example.point_105",
+        "alias.0.example.point_057",
+        "alias.0.example.point_094",
+        "alias.0.example.point_106",
+        "alias.0.example.point_109",
+        "alias.0.example.point_069",
+        "alias.0.example.point_067"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_107",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_099",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_091",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_084",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_046",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_074",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_088",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_087",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_059",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_052",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_086",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_093",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_079",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_080",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_041",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_065",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_076",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_077",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_048",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_045",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_095",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_100",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_083",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_082",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_043",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_078",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_089",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_092",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_060",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_053",
+            "value": true
+          }
+        ]
+      }
+    },
+    "raffstore.oben": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_025"
+      ],
+      "unreach": [
+        "alias.0.example.point_017"
+      ],
+      "position": [
+        "alias.0.example.point_032"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_038",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_033",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_037",
+            "value": true
+          }
+        ],
+        "slatUp": [
+          {
+            "id": "alias.0.example.point_018",
+            "value": "SCHRITT_RAUF"
+          }
+        ],
+        "slatDown": [
+          {
+            "id": "alias.0.example.point_018",
+            "value": "SCHRITT_RUNTER"
+          }
+        ],
+        "tilt": [
+          {
+            "id": "alias.0.example.point_003",
+            "valueFrom": "alias.0.example.point_103"
+          }
+        ]
+      }
+    },
+    "raffstore.mitte": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_015"
+      ],
+      "unreach": [
+        "alias.0.example.point_007"
+      ],
+      "position": [
+        "alias.0.example.point_019"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_027",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_023",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_031",
+            "value": true
+          }
+        ],
+        "slatUp": [
+          {
+            "id": "alias.0.example.point_009",
+            "value": "SCHRITT_RAUF"
+          }
+        ],
+        "slatDown": [
+          {
+            "id": "alias.0.example.point_009",
+            "value": "SCHRITT_RUNTER"
+          }
+        ],
+        "tilt": [
+          {
+            "id": "alias.0.example.point_001",
+            "valueFrom": "alias.0.example.point_103"
+          }
+        ]
+      }
+    },
+    "raffstore.links": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_014"
+      ],
+      "unreach": [
+        "alias.0.example.point_008"
+      ],
+      "position": [
+        "alias.0.example.point_022"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_026",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_024",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_030",
+            "value": true
+          }
+        ],
+        "slatUp": [
+          {
+            "id": "alias.0.example.point_010",
+            "value": "SCHRITT_RAUF"
+          }
+        ],
+        "slatDown": [
+          {
+            "id": "alias.0.example.point_010",
+            "value": "SCHRITT_RUNTER"
+          }
+        ],
+        "tilt": [
+          {
+            "id": "alias.0.example.point_002",
+            "valueFrom": "alias.0.example.point_103"
+          }
+        ]
+      }
+    },
+    "raffstore.rechts": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_012"
+      ],
+      "unreach": [
+        "alias.0.example.point_005"
+      ],
+      "position": [
+        "alias.0.example.point_016"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_020",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_013",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_021",
+            "value": true
+          }
+        ],
+        "slatUp": [
+          {
+            "id": "alias.0.example.point_006",
+            "value": "SCHRITT_RAUF"
+          }
+        ],
+        "slatDown": [
+          {
+            "id": "alias.0.example.point_006",
+            "value": "SCHRITT_RUNTER"
+          }
+        ],
+        "tilt": [
+          {
+            "id": "alias.0.example.point_000",
+            "valueFrom": "alias.0.example.point_103"
+          }
+        ]
+      }
+    },
+    "raffstore.alle": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_014",
+        "alias.0.example.point_015",
+        "alias.0.example.point_012",
+        "alias.0.example.point_025"
+      ],
+      "unreach": [
+        "alias.0.example.point_008",
+        "alias.0.example.point_007",
+        "alias.0.example.point_005",
+        "alias.0.example.point_017"
+      ],
+      "position": [
+        "alias.0.example.point_022",
+        "alias.0.example.point_019",
+        "alias.0.example.point_016",
+        "alias.0.example.point_032"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_026",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_027",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_020",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_038",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_024",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_023",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_013",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_033",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_030",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_031",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_021",
+            "value": true
+          },
+          {
+            "id": "alias.0.example.point_037",
+            "value": true
+          }
+        ],
+        "slatUp": [
+          {
+            "id": "alias.0.example.point_010",
+            "value": "SCHRITT_RAUF"
+          },
+          {
+            "id": "alias.0.example.point_009",
+            "value": "SCHRITT_RAUF"
+          },
+          {
+            "id": "alias.0.example.point_006",
+            "value": "SCHRITT_RAUF"
+          },
+          {
+            "id": "alias.0.example.point_018",
+            "value": "SCHRITT_RAUF"
+          }
+        ],
+        "slatDown": [
+          {
+            "id": "alias.0.example.point_010",
+            "value": "SCHRITT_RUNTER"
+          },
+          {
+            "id": "alias.0.example.point_009",
+            "value": "SCHRITT_RUNTER"
+          },
+          {
+            "id": "alias.0.example.point_006",
+            "value": "SCHRITT_RUNTER"
+          },
+          {
+            "id": "alias.0.example.point_018",
+            "value": "SCHRITT_RUNTER"
+          }
+        ],
+        "tilt": [
+          {
+            "id": "alias.0.example.point_002",
+            "valueFrom": "alias.0.example.point_103"
+          },
+          {
+            "id": "alias.0.example.point_001",
+            "valueFrom": "alias.0.example.point_103"
+          },
+          {
+            "id": "alias.0.example.point_000",
+            "valueFrom": "alias.0.example.point_103"
+          },
+          {
+            "id": "alias.0.example.point_003",
+            "valueFrom": "alias.0.example.point_103"
+          }
+        ]
+      }
+    },
+    "markise.terrasse": {
+      "kind": "cover",
+      "read": [
+        "alias.0.example.point_081"
+      ],
+      "unreach": [
+        "alias.0.example.point_066"
+      ],
+      "position": [
+        "alias.0.example.point_110"
+      ],
+      "actions": {
+        "up": [
+          {
+            "id": "alias.0.example.point_104",
+            "value": true
+          }
+        ],
+        "down": [
+          {
+            "id": "alias.0.example.point_085",
+            "value": true
+          }
+        ],
+        "stop": [
+          {
+            "id": "alias.0.example.point_096",
+            "value": true
+          }
+        ]
+      },
+      "note": "up/OPEN führt über vorhandenes Skript zu REIN; down/CLOSE zu RAUS. Position ist der vorhandene invertierte Aliaswert."
+    },
+    "licht.kueche.licht1": {
+      "kind": "switch",
+      "read": [
+        "alias.0.example.point_102"
+      ],
+      "write": "alias.0.example.point_102",
+      "unreach": [
+        "alias.0.example.point_056"
+      ]
+    },
+    "licht.kueche.licht2": {
+      "kind": "switch",
+      "read": [
+        "alias.0.example.point_097"
+      ],
+      "write": "alias.0.example.point_097",
+      "unreach": [
+        "alias.0.example.point_054"
+      ]
+    },
+    "licht.vorgarten": {
+      "kind": "switch",
+      "read": [
+        "alias.0.example.point_098"
+      ],
+      "write": "alias.0.example.point_098",
+      "unreach": [
+        "alias.0.example.point_050"
+      ]
+    },
+    "szene.schlafenszeit": {
+      "kind": "trigger",
+      "actions": {
+        "trigger": [
+          {
+            "id": "alias.0.example.point_090",
+            "value": true
+          }
+        ]
+      },
+      "note": "Live geprüft: bestehendes Skript reagiert auf true und setzt den Szenenwert anschließend auf false zurück."
+    }
+  },
+  "legacyCommands": {
+    "wohnzimmer.decke.toggle": {
+      "entity": "licht.wohnzimmer.decke",
+      "action": "toggle"
+    },
+    "wohnzimmer.leselampe.toggle": {
+      "entity": "licht.wohnzimmer.leselampe",
+      "action": "toggle"
+    },
+    "wohnzimmer.sofazeit.toggle": {
+      "entity": "szene.sofazeit",
+      "action": "toggle"
+    },
+    "esszimmer.decke.toggle": {
+      "entity": "licht.esszimmer.decke",
+      "action": "toggle"
+    },
+    "terrasse.licht.toggle": {
+      "entity": "licht.terrasse",
+      "action": "toggle"
+    },
+    "flur.licht.toggle": {
+      "entity": "licht.flur",
+      "action": "toggle"
+    },
+    "raffstore-oben.hoch": {
+      "entity": "raffstore.oben",
+      "action": "up"
+    },
+    "raffstore-oben.runter": {
+      "entity": "raffstore.oben",
+      "action": "down"
+    },
+    "raffstore-oben.stopp": {
+      "entity": "raffstore.oben",
+      "action": "stop"
+    },
+    "raffstore-oben.lamellen-hoch": {
+      "entity": "raffstore.oben",
+      "action": "slatUp"
+    },
+    "raffstore-oben.lamellen-runter": {
+      "entity": "raffstore.oben",
+      "action": "slatDown"
+    },
+    "raffstore-mitte.hoch": {
+      "entity": "raffstore.mitte",
+      "action": "up"
+    },
+    "raffstore-mitte.runter": {
+      "entity": "raffstore.mitte",
+      "action": "down"
+    },
+    "raffstore-mitte.stopp": {
+      "entity": "raffstore.mitte",
+      "action": "stop"
+    },
+    "raffstore-mitte.lamellen-hoch": {
+      "entity": "raffstore.mitte",
+      "action": "slatUp"
+    },
+    "raffstore-mitte.lamellen-runter": {
+      "entity": "raffstore.mitte",
+      "action": "slatDown"
+    },
+    "raffstore-links.hoch": {
+      "entity": "raffstore.links",
+      "action": "up"
+    },
+    "raffstore-links.runter": {
+      "entity": "raffstore.links",
+      "action": "down"
+    },
+    "raffstore-links.stopp": {
+      "entity": "raffstore.links",
+      "action": "stop"
+    },
+    "raffstore-links.lamellen-hoch": {
+      "entity": "raffstore.links",
+      "action": "slatUp"
+    },
+    "raffstore-links.lamellen-runter": {
+      "entity": "raffstore.links",
+      "action": "slatDown"
+    },
+    "raffstore-rechts.hoch": {
+      "entity": "raffstore.rechts",
+      "action": "up"
+    },
+    "raffstore-rechts.runter": {
+      "entity": "raffstore.rechts",
+      "action": "down"
+    },
+    "raffstore-rechts.stopp": {
+      "entity": "raffstore.rechts",
+      "action": "stop"
+    },
+    "raffstore-rechts.lamellen-hoch": {
+      "entity": "raffstore.rechts",
+      "action": "slatUp"
+    },
+    "raffstore-rechts.lamellen-runter": {
+      "entity": "raffstore.rechts",
+      "action": "slatDown"
+    },
+    "raffstore-alle.hoch": {
+      "entity": "raffstore.alle",
+      "action": "up"
+    },
+    "raffstore-alle.runter": {
+      "entity": "raffstore.alle",
+      "action": "down"
+    },
+    "raffstore-alle.stopp": {
+      "entity": "raffstore.alle",
+      "action": "stop"
+    },
+    "raffstore-alle.kippen": {
+      "entity": "raffstore.alle",
+      "action": "tilt"
+    },
+    "rollo-room_a.hoch": {
+      "entity": "rollo.room_a",
+      "action": "up"
+    },
+    "rollo-room_a.runter": {
+      "entity": "rollo.room_a",
+      "action": "down"
+    },
+    "rollo-room_a.stopp": {
+      "entity": "rollo.room_a",
+      "action": "stop"
+    },
+    "rollo-room_b.hoch": {
+      "entity": "rollo.room_b",
+      "action": "up"
+    },
+    "rollo-room_b.runter": {
+      "entity": "rollo.room_b",
+      "action": "down"
+    },
+    "rollo-room_b.stopp": {
+      "entity": "rollo.room_b",
+      "action": "stop"
+    },
+    "rollo-schlaf.hoch": {
+      "entity": "rollo.schlafzimmer",
+      "action": "up"
+    },
+    "rollo-schlaf.runter": {
+      "entity": "rollo.schlafzimmer",
+      "action": "down"
+    },
+    "rollo-schlaf.stopp": {
+      "entity": "rollo.schlafzimmer",
+      "action": "stop"
+    },
+    "rollo-flur.hoch": {
+      "entity": "rollo.flur",
+      "action": "up"
+    },
+    "rollo-flur.runter": {
+      "entity": "rollo.flur",
+      "action": "down"
+    },
+    "rollo-flur.stopp": {
+      "entity": "rollo.flur",
+      "action": "stop"
+    },
+    "rollo-kueche.hoch": {
+      "entity": "rollo.kueche",
+      "action": "up"
+    },
+    "rollo-kueche.runter": {
+      "entity": "rollo.kueche",
+      "action": "down"
+    },
+    "rollo-kueche.stopp": {
+      "entity": "rollo.kueche",
+      "action": "stop"
+    },
+    "rollo-essen.hoch": {
+      "entity": "rollo.esszimmer",
+      "action": "up"
+    },
+    "rollo-essen.runter": {
+      "entity": "rollo.esszimmer",
+      "action": "down"
+    },
+    "rollo-essen.stopp": {
+      "entity": "rollo.esszimmer",
+      "action": "stop"
+    },
+    "rollo-alle.hoch": {
+      "entity": "rollo.alle",
+      "action": "up"
+    },
+    "rollo-alle.runter": {
+      "entity": "rollo.alle",
+      "action": "down"
+    },
+    "rollo-alle.stopp": {
+      "entity": "rollo.alle",
+      "action": "stop"
+    },
+    "markise.hoch": {
+      "entity": "markise.terrasse",
+      "action": "up"
+    },
+    "markise.runter": {
+      "entity": "markise.terrasse",
+      "action": "down"
+    },
+    "markise.stopp": {
+      "entity": "markise.terrasse",
+      "action": "stop"
+    },
+    "markise.sommer": {
+      "entity": "szene.sommerbeschattung",
+      "action": "trigger"
+    },
+    "weihnachten.toggle": {
+      "entity": "szene.weihnachten",
+      "action": "toggle"
+    }
+  }
+}

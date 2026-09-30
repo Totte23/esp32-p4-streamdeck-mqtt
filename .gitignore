@@ -1,0 +1,17 @@
+.pio/
+build/
+sdkconfig
+sdkconfig.*
+!sdkconfig.defaults
+managed_components/
+include/secrets.h
+secrets.*
+!secrets.example.*
+.env
+.env.*
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+__pycache__/
+*.pyc

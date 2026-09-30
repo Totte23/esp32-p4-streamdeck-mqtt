@@ -1,0 +1,46 @@
+# Append these entries to automations.yaml. Replace light.example_hall with your light.
+# This example maps the menu's logical ID licht.flur explicitly; no arbitrary service calls.
+- id: streamdeck_example_light_command
+  alias: Stream Deck example - light command
+  triggers:
+    - trigger: mqtt
+      topic: streamdeck/mini/command
+  conditions:
+    - condition: template
+      value_template: >-
+        {{ trigger.payload_json is defined
+           and trigger.payload_json.v | default(0) == 1
+           and trigger.payload_json.entity | default('') == 'licht.flur'
+           and trigger.payload_json.action | default('') == 'toggle'
+           and states('light.example_hall') in ['on', 'off'] }}
+  actions:
+    - action: light.toggle
+      target:
+        entity_id: light.example_hall
+  mode: queued
+  max: 5
+
+- id: streamdeck_example_light_feedback
+  alias: Stream Deck example - confirmed light feedback
+  triggers:
+    - trigger: state
+      entity_id: light.example_hall
+    - trigger: homeassistant
+      event: start
+    - trigger: mqtt
+      topic: streamdeck/mini/availability
+      payload: online
+    # Periodic refresh also restores feedback after MQTT reconnects.
+    - trigger: time_pattern
+      minutes: /1
+  actions:
+    - action: mqtt.publish
+      data:
+        topic: streamdeck/mini/state/licht.flur
+        qos: 1
+        retain: true
+        payload: >-
+          {% set s = states('light.example_hall') %}
+          {{ {'v': 1, 'state': s if s in ['on', 'off'] else 'unknown',
+              'value': (s == 'on') if s in ['on', 'off'] else '?'} | to_json }}
+  mode: restart

@@ -1,0 +1,6 @@
+Twemoji graphics by Twitter, Inc. and other contributors.
+https://github.com/jdecked/twemoji
+Graphics licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+Original PNGs reused under local icon IDs and scaled into an 80x80 RGBA firmware bundle.
+Source URLs and hashes: manifest.json. Duplicate IDs are compatibility aliases.
+color_bulb_orange.svg and its PNG rendering are original project artwork under MIT.

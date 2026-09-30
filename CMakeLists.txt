@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.16)
+set(PROJECT_VER "0.3.1")
+# PlatformIO passes a distinct SDKCONFIG path for each environment.
+if(SDKCONFIG MATCHES "rev3")
+    set(SDKCONFIG_DEFAULTS "sdkconfig.defaults;config/rev3.defaults")
+else()
+    set(SDKCONFIG_DEFAULTS "sdkconfig.defaults;config/es.defaults")
+endif()
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(esp32_p4_streamdeck)

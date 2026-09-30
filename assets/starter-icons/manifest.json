@@ -1,0 +1,295 @@
+[
+  {
+    "id": "sd_lampe",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f4a1.png",
+    "sha256": "bf0b74aa708457db96c21f658f0eff5ec185a10242f4aa157a86823149c7d704",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_decke",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f4a1.png",
+    "sha256": "bf0b74aa708457db96c21f658f0eff5ec185a10242f4aa157a86823149c7d704",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_raffstore",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1fa9f.png",
+    "sha256": "f60395a0b6f24c98e1e0f5b31a2ac307eef6f01f95d29f0ae3a6ae199d0e1ead",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_rollo",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1fa9f.png",
+    "sha256": "f60395a0b6f24c98e1e0f5b31a2ac307eef6f01f95d29f0ae3a6ae199d0e1ead",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_sonne",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/2600.png",
+    "sha256": "b39314735b047ac70961be0a361e4335a076cb3cc8afd22ab720ec22e88a9d0d",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_szenen",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f3e0.png",
+    "sha256": "4a3ff7cc7a31c7623d0bc52bc2844ef31477092c400e9aae58e27dda38af07c6",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_sofa",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f6cb.png",
+    "sha256": "e2dca474f276af3bef0d0b6ab10df0cb3d5d201ccd3982797eb866e3932f74d1",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_essen",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f37d.png",
+    "sha256": "d700ce0c0db744dcb9ec559bba646107fbe51aadc54eb76adbd7299cd560a3db",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_terrasse",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f333.png",
+    "sha256": "e242fb8d5bc9d9d0365d1cdea3ea7a2636e22a4f4e6dc2509fc090498759cc10",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_flur",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f3e0.png",
+    "sha256": "4a3ff7cc7a31c7623d0bc52bc2844ef31477092c400e9aae58e27dda38af07c6",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_kind",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/2600.png",
+    "sha256": "b39314735b047ac70961be0a361e4335a076cb3cc8afd22ab720ec22e88a9d0d",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_bett",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f6cf.png",
+    "sha256": "ff3dbb36aac02da1638214aadcbc1a132ba48ed843ffa0ec6a05fb7952baaf6f",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_kueche",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f37d.png",
+    "sha256": "d700ce0c0db744dcb9ec559bba646107fbe51aadc54eb76adbd7299cd560a3db",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_treppe",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f3e0.png",
+    "sha256": "4a3ff7cc7a31c7623d0bc52bc2844ef31477092c400e9aae58e27dda38af07c6",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_haus",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f3e0.png",
+    "sha256": "4a3ff7cc7a31c7623d0bc52bc2844ef31477092c400e9aae58e27dda38af07c6",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_hoch",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f53c.png",
+    "sha256": "e7366c8a33198c50edb12e2910d4c4dfafe9250e38537d66e34b2fb874ccc8e7",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_runter",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f53d.png",
+    "sha256": "b1a70b88b8e804f974e49f25a9a77cb06938ada16b3cb8d69721fbae77091add",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_stopp",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f7e5.png",
+    "sha256": "2a19254a09cbc9e752d53c54b9cbaf0965d9520947e71bba4133b7a77e869b64",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_lamellen",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1fa9f.png",
+    "sha256": "f60395a0b6f24c98e1e0f5b31a2ac307eef6f01f95d29f0ae3a6ae199d0e1ead",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_weihnachten",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f384.png",
+    "sha256": "eb29ddb93eefdea899ba9216dd5541ada796a647ff339c891f620046d7cd1440",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "sd_lesen",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f4a1.png",
+    "sha256": "bf0b74aa708457db96c21f658f0eff5ec185a10242f4aa157a86823149c7d704",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_flur",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f3e0.png",
+    "sha256": "4a3ff7cc7a31c7623d0bc52bc2844ef31477092c400e9aae58e27dda38af07c6",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_home",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f3e0.png",
+    "sha256": "4a3ff7cc7a31c7623d0bc52bc2844ef31477092c400e9aae58e27dda38af07c6",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_garten",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f333.png",
+    "sha256": "e242fb8d5bc9d9d0365d1cdea3ea7a2636e22a4f4e6dc2509fc090498759cc10",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_esszimmer",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f37d.png",
+    "sha256": "d700ce0c0db744dcb9ec559bba646107fbe51aadc54eb76adbd7299cd560a3db",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_diverse",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f3e0.png",
+    "sha256": "4a3ff7cc7a31c7623d0bc52bc2844ef31477092c400e9aae58e27dda38af07c6",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_raffstore",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1fa9f.png",
+    "sha256": "f60395a0b6f24c98e1e0f5b31a2ac307eef6f01f95d29f0ae3a6ae199d0e1ead",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_bulb_orange",
+    "source": "color_bulb_orange.svg",
+    "sha256": "2b34a6b5af8d771b1e23f6c5e1ddfa4f8913b88c72185d0858ae3ce430b20feb",
+    "upscale": true
+  },
+  {
+    "id": "color_rollo",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1fa9f.png",
+    "sha256": "f60395a0b6f24c98e1e0f5b31a2ac307eef6f01f95d29f0ae3a6ae199d0e1ead",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_markise",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/26f1.png",
+    "sha256": "6f7cec079b03e3b588e0c3d054191ddda1af73091400caf355f5a6b2e85ec4fb",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_szenen",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f3e0.png",
+    "sha256": "4a3ff7cc7a31c7623d0bc52bc2844ef31477092c400e9aae58e27dda38af07c6",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_wohnzimmer",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f6cb.png",
+    "sha256": "e2dca474f276af3bef0d0b6ab10df0cb3d5d201ccd3982797eb866e3932f74d1",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_temp",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f321.png",
+    "sha256": "ac0cf6d2f0d32ee901198704eed5fd42d0991be6c231dcdec248e2a1e9082018",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_shutter",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1fa9f.png",
+    "sha256": "f60395a0b6f24c98e1e0f5b31a2ac307eef6f01f95d29f0ae3a6ae199d0e1ead",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_kueche",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f37d.png",
+    "sha256": "d700ce0c0db744dcb9ec559bba646107fbe51aadc54eb76adbd7299cd560a3db",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_bed",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f6cf.png",
+    "sha256": "ff3dbb36aac02da1638214aadcbc1a132ba48ed843ffa0ec6a05fb7952baaf6f",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_child",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f9d2.png",
+    "sha256": "213ec45a463aefb06221f32596a3f3e2d6e668f07763b3581015574987c3d845",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_sun",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/2600.png",
+    "sha256": "b39314735b047ac70961be0a361e4335a076cb3cc8afd22ab720ec22e88a9d0d",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_christmas",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f384.png",
+    "sha256": "eb29ddb93eefdea899ba9216dd5541ada796a647ff339c891f620046d7cd1440",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_up",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f53c.png",
+    "sha256": "e7366c8a33198c50edb12e2910d4c4dfafe9250e38537d66e34b2fb874ccc8e7",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_down",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f53d.png",
+    "sha256": "b1a70b88b8e804f974e49f25a9a77cb06938ada16b3cb8d69721fbae77091add",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  },
+  {
+    "id": "color_stop",
+    "source": "https://raw.githubusercontent.com/jdecked/twemoji/main/assets/72x72/1f7e5.png",
+    "sha256": "2a19254a09cbc9e752d53c54b9cbaf0965d9520947e71bba4133b7a77e869b64",
+    "upscale": true,
+    "license": "CC-BY-4.0"
+  }
+]

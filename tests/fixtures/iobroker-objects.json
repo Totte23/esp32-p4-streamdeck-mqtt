@@ -1,0 +1,1178 @@
+[
+  {
+    "_id": "alias.0.example.point_042",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_048",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_059",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_069",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_060",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_035",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_040",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_045",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_052",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_067",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_053",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_036",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_062",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_065",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_074",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_094",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_078",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_047",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_068",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_079",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_091",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_108",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_083",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_051",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_072",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_080",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_084",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_105",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_082",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_055",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_063",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_076",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_088",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_106",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_089",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_049",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_064",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_077",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_087",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_109",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_092",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_058",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_075",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_086",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_107",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_112",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_095",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_070",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_073",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_093",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_099",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_114",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_100",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_071",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_081",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_085",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_104",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_110",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_096",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_066",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_014",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_024",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_010",
+    "type": "state",
+    "common": {
+      "type": "string",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_022",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_026",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_002",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_030",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_008",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_015",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_023",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_009",
+    "type": "state",
+    "common": {
+      "type": "string",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_019",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_027",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_001",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_031",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_007",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_025",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_033",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_018",
+    "type": "state",
+    "common": {
+      "type": "string",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_032",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_038",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_003",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_037",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_017",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_012",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_013",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_006",
+    "type": "state",
+    "common": {
+      "type": "string",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_016",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_020",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_000",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_021",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_005",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_039",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": false,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_041",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_046",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_057",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "read": true,
+      "write": true,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    }
+  },
+  {
+    "_id": "alias.0.example.point_043",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": false,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_029",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_034",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_011",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_028",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_004",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_117",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_111",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_102",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_056",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_097",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_054",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_118",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_115",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_101",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_061",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_103",
+    "type": "state",
+    "common": {
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_116",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_044",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_113",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_098",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  },
+  {
+    "_id": "alias.0.example.point_050",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": false
+    }
+  },
+  {
+    "_id": "alias.0.example.point_090",
+    "type": "state",
+    "common": {
+      "type": "boolean",
+      "read": true,
+      "write": true
+    }
+  }
+]
