@@ -22,6 +22,7 @@ static void event(void *arg,esp_event_base_t event_base,int32_t id,void *data)
     (void)arg;(void)event_base;
     esp_mqtt_event_handle_t e=data;
     if(id==MQTT_EVENT_CONNECTED) {
+        ESP_LOGI("mqtt", "Connected to broker; subscribing to states");
         received=expected=0; menu_offline();
         snprintf(status_topic,sizeof(status_topic),"%s/state/+",base);
         esp_mqtt_client_subscribe(client,status_topic,0);
@@ -29,6 +30,7 @@ static void event(void *arg,esp_event_base_t event_base,int32_t id,void *data)
         if(!++generation) ++generation;
         atomic_store(&session,generation);
     } else if(id==MQTT_EVENT_DISCONNECTED) {
+        ESP_LOGW("mqtt", "Disconnected from broker; automatic reconnect enabled");
         atomic_store(&session,0);received=expected=0;menu_offline();
     } else if(id==MQTT_EVENT_DATA) {
         if(e->current_data_offset==0) {

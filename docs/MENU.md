@@ -95,7 +95,7 @@ Links oben steht der `title` der aktuellen Seite in Hellblau über dem Weiter-Pf
 
 ## Eigenständiger visueller Editor
 
-`examples/menu-editor.html` per Doppelklick im Browser öffnen. Die einzelne HTML enthält die aktuelle Menüvorlage, das Schema, die Bitmap-Schrift und die 42 Starter-Icons. Sie funktioniert ohne Server und ohne Internetverbindung.
+`examples/menu-editor.html` per Doppelklick im Browser öffnen. Die einzelne HTML enthält die aktuelle Menüvorlage, das Schema, die Bitmap-Schrift und die im Menü verwendeten Starter-Icons. Sie funktioniert ohne Server und ohne Internetverbindung.
 
 1. Bei einem bereits angepassten ESP-Menü zuerst dessen JSON herunterladen und im Editor über **JSON öffnen** importieren.
 2. Links die Seite wählen; im Modus **Tasten bearbeiten** eine rechte Taste anklicken. Texte, Icon, Größe, Farben, Zustandsstile und Aktionen im rechten Bereich ändern. Unbearbeitete JSON-Felder bleiben erhalten.

@@ -85,11 +85,11 @@ int main(void)
     uint8_t *bundle=malloc(pack_size);assert(bundle);assert(fread(bundle,1,pack_size,pack)==pack_size);fclose(pack);
     assert(icon_store_seed(bundle,pack_size-1)==ESP_ERR_INVALID_ARG);
     assert(icon_store_seed(bundle,pack_size)==ESP_OK);
-    icon_inventory_t seeded;assert(icon_store_inventory(&seeded)==ESP_OK&&seeded.count==42);
-    assert(icon_store_write("sd_lampe",original,sizeof(original))==ESP_OK);
+    icon_inventory_t seeded;assert(icon_store_inventory(&seeded)==ESP_OK&&seeded.count==bundle[8]);
+    assert(icon_store_write("color_flur",original,sizeof(original))==ESP_OK);
     assert(icon_store_seed(bundle,pack_size)==ESP_OK);
-    assert(icon_store_read("sd_lampe",readback)==ESP_OK&&!memcmp(original,readback,sizeof(original)));
-    assert(icon_store_delete("sd_lampe")==ESP_OK);
+    assert(icon_store_read("color_flur",readback)==ESP_OK&&!memcmp(original,readback,sizeof(original)));
+    assert(icon_store_delete("color_flur")==ESP_OK);
     rename_fails=true;assert(icon_store_seed(bundle,pack_size)==ESP_FAIL);rename_fails=false;
     assert(icon_store_seed(bundle,pack_size)==ESP_OK);
     free(bundle);clean();

@@ -14,13 +14,18 @@
 extern const uint8_t starter_start[] asm("_binary_starter_icons_bin_start");
 extern const uint8_t starter_end[] asm("_binary_starter_icons_bin_end");
 
+extern const uint8_t menu_default_start[] asm("_binary_menu_json_start");
+extern const uint8_t menu_default_end[] asm("_binary_menu_json_end");
+
 static void help(void)
 {
     puts("\nStream Deck Mini / ESP32-P4-NANO\n"
          "  b 0..100  Set brightness\n"
          "  demo      Redraw current menu\n"
          "  status    Show USB state\n"
+         "  menu-default  Replace saved menu with bundled template\n"
          "  help      Show commands\n"
+         "wifi-reconnect: reconnect WLAN; wifi-reset: reset C6/SDIO.\n"
          "Left top: next page. Left bottom: previous page.\n");
 }
 
@@ -29,6 +34,15 @@ static void command(char *line)
     esp_err_t err = ESP_OK;
     if (!strcmp(line, "help")) help();
     else if (!strcmp(line, "demo")) err = deck_usb_demo();
+    else if (!strcmp(line, "menu-default")) {
+        char reason[160] = {0};
+        size_t length = menu_default_end - menu_default_start;
+        if (length && !menu_default_start[length-1]) --length;
+        err = menu_upload((const char *)menu_default_start, length, reason, sizeof(reason));
+        ESP_LOGI("console", "Bundled menu: %s %s", esp_err_to_name(err), reason);
+    }
+    else if (!strcmp(line, "wifi-reconnect")) err = network_recover(false);
+    else if (!strcmp(line, "wifi-reset")) err = network_recover(true);
     else if (!strcmp(line, "status")) err = deck_usb_status();
     else if (!strncmp(line, "b ", 2)) {
         char *end;

@@ -34,7 +34,7 @@ this software.
 ## Komponenten in Firmware 0.2
 
 - `joltwallet/littlefs` 1.22.3: LittleFS-Einbindung; https://github.com/joltwallet/esp_littlefs
-- `espressif/esp_hosted` 1.4.7 und `espressif/esp_wifi_remote` 0.14.5: C6-SDIO und WLAN-API; https://github.com/espressif/esp-hosted-mcu und https://github.com/espressif/esp-wifi-remote
+- `espressif/esp_hosted` 2.12.13 und `espressif/esp_wifi_remote` 0.14.5: C6-SDIO und WLAN-API; https://github.com/espressif/esp-hosted-mcu und https://github.com/espressif/esp-wifi-remote
 
 Die Komponenten und ihre jeweiligen Lizenzdateien werden vom IDF Component Manager heruntergeladen; Versions- und Prüfsummenbindung siehe `dependencies.lock`. Die Weboberfläche benötigt keine extern geladenen Browserbibliotheken. Playwright/Chromium wird nur als externes Entwicklungs-Testwerkzeug verwendet und nicht auf dem ESP ausgeliefert.
 
@@ -46,3 +46,5 @@ Die Komponenten und ihre jeweiligen Lizenzdateien werden vom IDF Component Manag
 
 
 See [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md) for redistributed assets and license files.
+
+Die C6-/SDIO-Recovery in `src/network.c` orientiert sich am Ablauf von Espressifs `host_shuts_down_slave_to_power_save` (ESP-Hosted v2.12.13, Apache-2.0): https://github.com/espressif/esp-hosted-mcu/tree/v2.12.13/examples/host_shuts_down_slave_to_power_save .

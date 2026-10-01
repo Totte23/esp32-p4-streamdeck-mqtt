@@ -199,8 +199,8 @@
               "center": "AUS"
             },
             "on": {
-              "background": "#705000",
-              "textColor": "#FFFFFF",
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
               "center": "AN"
             }
           },
@@ -1628,8 +1628,8 @@
               "center": "AUS"
             },
             "on": {
-              "background": "#705000",
-              "textColor": "#FFFFFF",
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
               "center": "AN"
             }
           },
@@ -1658,8 +1658,8 @@
               "center": "AUS"
             },
             "on": {
-              "background": "#705000",
-              "textColor": "#FFFFFF",
+              "background": "#FFF3B0",
+              "textColor": "#4A2C16",
               "center": "AN"
             }
           },

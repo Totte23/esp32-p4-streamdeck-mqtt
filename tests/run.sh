@@ -30,3 +30,7 @@ CJSON_DIR="${CJSON_DIR:-$HOME/.platformio/packages/framework-espidf/components/j
   -D_POSIX_C_SOURCE=200809L src/icon_format.c src/menu_model.c "$CJSON_DIR/cJSON.c" tests/test_mqtt.c \
   -o build/tests/test_mqtt
 ./build/tests/test_mqtt
+
+
+"${CC:-cc}" -std=c11 -Wall -Wextra -Werror -Iinclude tests/test_network_watchdog.c -o build/tests/test_network_watchdog
+./build/tests/test_network_watchdog

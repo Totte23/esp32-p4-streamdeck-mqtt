@@ -7,7 +7,7 @@ Developed with extensive AI assistance (“vibe coding”), with automated tests
 ## Features
 
 - USB High-Speed host, six button displays and key input.
-- Wi-Fi through the on-board ESP32-C6 and ESP-Hosted.
+- Wi-Fi through the on-board ESP32-C6 and ESP-Hosted, with staged recovery: reconnect, C6/SDIO reset, then P4 reboot.
 - JSON menus, PNG/SVG upload, text overlays and state-dependent colors.
 - Embedded web interface and standalone offline HTML editor.
 - MQTT commands and confirmed-state feedback; works with any backend implementing the documented protocol.
@@ -17,6 +17,8 @@ Developed with extensive AI assistance (“vibe coding”), with automated tests
 ## Hardware and build
 
 Connect the Mini directly to the board’s USB-A host port. Power/flash through USB-C; a regulated 5 V supply with sufficient reserve for both devices is required. No separate filesystem upload is needed: the web interface is embedded and menu/icons are stored in LittleFS.
+
+**C6 firmware prerequisite:** the tested setup uses ESP-Hosted **2.12.13 on both P4 and C6**. A normal PlatformIO upload updates only the P4. See [Wi-Fi setup and recovery](docs/WIFI.md) before upgrading an older installation.
 
 1. Install PlatformIO in VS Code, open this directory.
 2. Copy `include/secrets.example.h` to `include/secrets.h`; fill in 2.4 GHz WLAN and MQTT credentials. This file is ignored by Git.

@@ -14,7 +14,7 @@ dependencies:
       type: service
     version: 1.1.6
   espressif/esp_hosted:
-    component_hash: acda00d70be52c148b5f1c22e34c83fd182650c8e96ef83e81173627b1b13a0f
+    component_hash: f1792f36ef9a637adf2faa2662f3c4500b07f3d2ba65c25f3ed4824490ba59f9
     dependencies:
     - name: idf
       require: private
@@ -22,7 +22,7 @@ dependencies:
     source:
       registry_url: https://components.espressif.com/
       type: service
-    version: 1.4.7
+    version: 2.12.13
   espressif/esp_serial_slave_link:
     component_hash: ac1776806de0a6e371c84e87898bb983e19ce62aa7f1e2e5c4a3b0234a575d2c
     dependencies:
@@ -71,6 +71,6 @@ direct_dependencies:
 - espressif/esp_hosted
 - espressif/esp_wifi_remote
 - joltwallet/littlefs
-manifest_hash: d3de80344af20d28032a92dcd084e05d93f46dc15241fb00ded1a97fd4f8b332
+manifest_hash: 602caf9eb98f8e284dbe186772d3ce2784c0627230abb0aa8b7e0493094dc241
 target: esp32p4
 version: 2.0.0

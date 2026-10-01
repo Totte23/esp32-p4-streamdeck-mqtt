@@ -8,6 +8,25 @@ from PIL import Image
 root=Path(__file__).resolve().parents[1]
 folder=root/'assets/starter-icons'
 manifest=json.loads((folder/'manifest.json').read_text())
+# Embed only icons referenced by the bundled menu; the full PNG collection remains
+# available for later upload. This keeps the P4 app within its existing 2 MiB slot.
+def referenced_icons(value):
+    result=set()
+    if isinstance(value,dict):
+        for key,item in value.items():
+            if key == 'icon' and isinstance(item,str) and item:
+                result.add(item.removesuffix(".png"))
+            else:
+                result.update(referenced_icons(item))
+    elif isinstance(value,list):
+        for item in value:
+            result.update(referenced_icons(item))
+    return result
+needed=referenced_icons(json.loads((root/'examples/menu.json').read_text()))
+missing=needed-{entry['id'] for entry in manifest}
+if missing:
+    raise ValueError(f'Menu icons missing from manifest: {sorted(missing)}')
+manifest=[entry for entry in manifest if entry['id'] in needed]
 bundle=bytearray(b'SDICONS1'+bytes([len(manifest)]))
 for entry in manifest:
     name=entry['id'].encode('ascii')
