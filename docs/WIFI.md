@@ -2,6 +2,8 @@
 
 Die Firmware verwendet die ESP-IDF-WLAN-API über `esp_wifi_remote` und ESP-Hosted. Der P4 kommuniziert über SDIO mit dem aufgelöteten C6. Ein LAN-Kabel wird dafür nicht benötigt.
 
+Zum beobachteten Ausfall, dem C6-/P4-Firmwareabgleich und den Quellen: [Erfahrungsbericht WLAN/C6](WIFI_TROUBLESHOOTING.md).
+
 ## Festgelegte Kombination
 
 - ESP-IDF **5.5.5** (pioarduino **55.03.312-1**)

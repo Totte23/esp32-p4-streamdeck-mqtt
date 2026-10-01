@@ -51,3 +51,7 @@ After editing icons or templates, run `python3 scripts/build_starter_icons.py` (
 ## Licenses
 
 Original project code: MIT. Third-party files retain their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Distributed icons are Twemoji (CC BY 4.0), except the original orange bulb (MIT). Personal installation data and icons of unknown provenance are excluded from this repository and its history.
+
+## WLAN-/C6-Erfahrungsbericht
+
+[Beobachtete Ausfälle, Firmwareabgleich und Quellen](docs/WIFI_TROUBLESHOOTING.md) – mit den bestätigten Ergebnissen und den Grenzen unserer bisherigen Tests.
