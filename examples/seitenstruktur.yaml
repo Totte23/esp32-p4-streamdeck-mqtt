@@ -1,102 +1,201 @@
-# Seitenplan zum Bearbeiten und Zurückgeben. Noch kein Uploadformat.
-# Einrückung zeigt Unterseiten. Leere Werte bedeuten: Seite ohne weitere Unterseite.
-# IDs entsprechen menu.json; Funktionen, Icons und MQTT sind hier weggelassen.
-# raffstores-2 ist eine Fortsetzungsseite über die linke Weiter-Taste.
-# rollo-alle ist dieselbe Seite, erreichbar über mehrere Menüs.
+# Navigation wie StreamController. Tatsächliche Tastenbelegung in menu.json.
+# Links oben: Home/Übersicht ohne Raumtitel.
+# Pfeiltaste: oben aktuelle Seite/Raum, unten nächstes Ziel.
+# 2 s halten bleibt als unbeschriftete Home-Geste erhalten.
+# Ausnahmen: Hauptmenü = sechs Kategorien; Raffstore-Übersicht unten links = Alle.
+hauptmenue:
+  Licht: [wohnzimmer, esszimmer, garten]
+  Raffstores: [raffstore-oben, raffstore-links, raffstore-mitte, raffstore-rechts, raffstore-alle]
+  Rollos_oben: [rollo-room_a, rollo-room_b, rollo-schlaf, rollo-flur]
+  Rollos_unten: [rollo-kueche, rollo-essen, rollo-alle]
+  Markise: []
+  Szenen: [Weihnachten, Sofazeit, Sommerbeschattung, Schlafenszeit]
 
-seitenbaum:
+lichtseiten:
+  wohnzimmer: [Decke, Leselampe, Sofazeit, Weihnachten]
+  esszimmer: [Decke, Küche_1, Küche_2, Flur]
+  garten: [Vorgarten, Terrasse]
+
+seiten:
   hauptmenue:
-    licht:
-      wohnzimmer:
-      esszimmer: # Decke, Küche 1, Küche 2
-      garten: # Vorgarten, Terrasse
-      flur:
-    beschattung:
-      raffstores:
-        raffstore-oben:
-          raffstore-oben-lamellen:
-        raffstore-mitte:
-          raffstore-mitte-lamellen:
-        raffstore-links:
-          raffstore-links-lamellen:
-        raffstore-rechts:
-          raffstore-rechts-lamellen:
-        raffstores-2: # Weiterblättern
-          raffstore-alle:
-      rollos-oben:
-        rollo-room_a:
-        rollo-room_b:
-        rollo-schlaf:
-        rollo-flur:
-      rollos-unten:
-        rollo-kueche:
-        rollo-essen:
-        rollo-alle: # Verweis auf dieselbe Alle-Seite
-      rollo-alle:
-    markise:
-    szenen: # Weihnachten, Sofazeit, Sommer, Schlafenszeit
-
-# Aktuelle linke Tasten: kurz Zurück/Weiter, unten 2 s halten = hauptmenue.
-# Diese Verbindungen sind unabhängig von der Einrückung oben.
-blaettern:
-  hauptmenue: {zurueck: szenen, weiter: licht}
-  licht: {zurueck: hauptmenue, weiter: beschattung}
-  wohnzimmer: {zurueck: licht, weiter: esszimmer}
-  esszimmer: {zurueck: wohnzimmer, weiter: garten}
-  garten: {zurueck: esszimmer, weiter: flur}
-  flur: {zurueck: garten, weiter: licht}
-  beschattung: {zurueck: licht, weiter: markise}
-  raffstores: {zurueck: beschattung, weiter: raffstores-2}
-  raffstores-2: {zurueck: raffstores, weiter: beschattung}
-  raffstore-oben: {zurueck: raffstores, weiter: raffstore-oben-lamellen}
-  raffstore-oben-lamellen: {zurueck: raffstore-oben, weiter: raffstores}
-  raffstore-mitte: {zurueck: raffstores, weiter: raffstore-mitte-lamellen}
-  raffstore-mitte-lamellen: {zurueck: raffstore-mitte, weiter: raffstores}
-  raffstore-links: {zurueck: raffstores, weiter: raffstore-links-lamellen}
-  raffstore-links-lamellen: {zurueck: raffstore-links, weiter: raffstores}
-  raffstore-rechts: {zurueck: raffstores, weiter: raffstore-rechts-lamellen}
-  raffstore-rechts-lamellen: {zurueck: raffstore-rechts, weiter: raffstores}
-  raffstore-alle: {zurueck: raffstores, weiter: raffstores-2}
-  rollos-oben: {zurueck: beschattung, weiter: rollos-unten}
-  rollos-unten: {zurueck: rollos-oben, weiter: beschattung}
-  rollo-room_a: {zurueck: rollos-oben, weiter: rollos-oben}
-  rollo-room_b: {zurueck: rollos-oben, weiter: rollos-oben}
-  rollo-schlaf: {zurueck: rollos-oben, weiter: rollos-oben}
-  rollo-flur: {zurueck: rollos-oben, weiter: rollos-oben}
-  rollo-kueche: {zurueck: rollos-unten, weiter: rollos-unten}
-  rollo-essen: {zurueck: rollos-unten, weiter: rollos-unten}
-  rollo-alle: {zurueck: rollos-unten, weiter: rollos-unten}
-  markise: {zurueck: beschattung, weiter: szenen}
-  szenen: {zurueck: markise, weiter: hauptmenue}
-
-# Kurztitel auf dem Display.
-anzeigetitel:
-  hauptmenue: "Hauptmenü"
-  licht: "Licht"
-  wohnzimmer: "Wohnz."
-  esszimmer: "Essz."
-  garten: "Garten"
-  flur: "Flur"
-  beschattung: "Schatten"
-  raffstores: "Raffst."
-  raffstores-2: "Raffst. 2"
-  raffstore-oben: "Raffst. oben"
-  raffstore-oben-lamellen: "Lamellen oben"
-  raffstore-mitte: "Raffst. mitte"
-  raffstore-mitte-lamellen: "Lamellen mitte"
-  raffstore-links: "Raffst. links"
-  raffstore-links-lamellen: "Lamellen links"
-  raffstore-rechts: "Raffst. rechts"
-  raffstore-rechts-lamellen: "Lamellen rechts"
-  raffstore-alle: "Raffst. alle"
-  rollos-oben: "Rollos oben"
-  rollos-unten: "Rollos unten"
-  rollo-room_a: "Rollo RoomA"
-  rollo-room_b: "Rollo RoomB"
-  rollo-schlaf: "Rollo Schlaf"
-  rollo-flur: "Rollo Flur"
-  rollo-kueche: "Rollo Küche"
-  rollo-essen: "Rollo Essen"
-  rollo-alle: "Rollo Alle"
-  markise: "Markise"
-  szenen: "Szenen"
+    titel: "Hauptmenü"
+    leftTop: "Licht → wohnzimmer"
+    topLeft: "Raffst. → raffstores"
+    topRight: "R. oben → rollos-oben"
+    leftBottom: "Szenen → szenen"
+    bottomLeft: "Markise → markise"
+    bottomRight: "R. unten → rollos-unten"
+  wohnzimmer:
+    titel: "Wohnz."
+    topLeft: "Decke → licht.wohnzimmer.decke"
+    topRight: "Lesel. → licht.wohnzimmer.leselampe"
+    bottomLeft: "Sofazeit → szene.sofazeit"
+    bottomRight: "Weihn. → szene.weihnachten"
+    leftTop: "Home → hauptmenue"
+    leftBottom: "Essz. → esszimmer"
+  esszimmer:
+    titel: "Essz."
+    topLeft: "Decke → licht.esszimmer.decke"
+    topRight: "Küche 1 → licht.kueche.licht1"
+    bottomLeft: "Küche 2 → licht.kueche.licht2"
+    bottomRight: "Flur → licht.flur"
+    leftTop: "Home → hauptmenue"
+    leftBottom: "Garten → garten"
+  garten:
+    titel: "Garten"
+    topLeft: "Vorgarten → licht.vorgarten"
+    topRight: "Terrasse → licht.terrasse"
+    leftTop: "Home → hauptmenue"
+    leftBottom: "Wohnz. → wohnzimmer"
+  raffstores:
+    titel: "Raffst."
+    topLeft: "Oben → raffstore-oben"
+    topRight: "Mitte → raffstore-mitte"
+    bottomLeft: "Links → raffstore-links"
+    bottomRight: "Rechts → raffstore-rechts"
+    leftTop: "Home → hauptmenue"
+    leftBottom: "Alle → raffstore-alle"
+  raffstore-oben:
+    titel: "Raffst. oben"
+    topLeft: "Hoch → raffstore.oben"
+    topRight: "Runter → raffstore.oben"
+    bottomLeft: "Stopp → raffstore.oben"
+    bottomRight: "Lamellen → raffstore-oben-lamellen"
+    leftTop: "Übersicht → raffstores"
+    leftBottom: "Raff. links → raffstore-links"
+  raffstore-oben-lamellen:
+    titel: "Lamellen oben"
+    topLeft: "Schritt + → raffstore.oben"
+    topRight: "Schritt - → raffstore.oben"
+    leftTop: "Übersicht → raffstore-oben"
+    leftBottom: "Lam. links → raffstore-links-lamellen"
+  raffstore-mitte:
+    titel: "Raffst. mitte"
+    topLeft: "Hoch → raffstore.mitte"
+    topRight: "Runter → raffstore.mitte"
+    bottomLeft: "Stopp → raffstore.mitte"
+    bottomRight: "Lamellen → raffstore-mitte-lamellen"
+    leftTop: "Übersicht → raffstores"
+    leftBottom: "Raff. rechts → raffstore-rechts"
+  raffstore-mitte-lamellen:
+    titel: "Lamellen mitte"
+    topLeft: "Schritt + → raffstore.mitte"
+    topRight: "Schritt - → raffstore.mitte"
+    leftTop: "Übersicht → raffstore-mitte"
+    leftBottom: "Lam. rechts → raffstore-rechts-lamellen"
+  raffstore-links:
+    titel: "Raffst. links"
+    topLeft: "Hoch → raffstore.links"
+    topRight: "Runter → raffstore.links"
+    bottomLeft: "Stopp → raffstore.links"
+    bottomRight: "Lamellen → raffstore-links-lamellen"
+    leftTop: "Übersicht → raffstores"
+    leftBottom: "Raff. mitte → raffstore-mitte"
+  raffstore-links-lamellen:
+    titel: "Lamellen links"
+    topLeft: "Schritt + → raffstore.links"
+    topRight: "Schritt - → raffstore.links"
+    leftTop: "Übersicht → raffstore-links"
+    leftBottom: "Lam. mitte → raffstore-mitte-lamellen"
+  raffstore-rechts:
+    titel: "Raffst. rechts"
+    topLeft: "Hoch → raffstore.rechts"
+    topRight: "Runter → raffstore.rechts"
+    bottomLeft: "Stopp → raffstore.rechts"
+    bottomRight: "Lamellen → raffstore-rechts-lamellen"
+    leftTop: "Übersicht → raffstores"
+    leftBottom: "Raff. alle → raffstore-alle"
+  raffstore-rechts-lamellen:
+    titel: "Lamellen rechts"
+    topLeft: "Schritt + → raffstore.rechts"
+    topRight: "Schritt - → raffstore.rechts"
+    leftTop: "Übersicht → raffstore-rechts"
+    leftBottom: "Lam. oben → raffstore-oben-lamellen"
+  raffstore-alle:
+    titel: "Raffst. alle"
+    topLeft: "Hoch → raffstore.alle"
+    topRight: "Runter → raffstore.alle"
+    bottomLeft: "Stopp → raffstore.alle"
+    bottomRight: "Kippen → raffstore.alle"
+    leftTop: "Übersicht → raffstores"
+    leftBottom: "Raff. oben → raffstore-oben"
+  rollos-oben:
+    titel: "Rollos oben"
+    topLeft: "RoomA → rollo-room_a"
+    topRight: "RoomB → rollo-room_b"
+    bottomLeft: "Schlaf → rollo-schlaf"
+    bottomRight: "Flur → rollo-flur"
+    leftTop: "Home → hauptmenue"
+    leftBottom: "R. unten → rollos-unten"
+  rollos-unten:
+    titel: "Rollos unten"
+    topLeft: "Küche → rollo-kueche"
+    topRight: "Essz. → rollo-essen"
+    bottomLeft: "Alle → rollo-alle"
+    leftTop: "Home → hauptmenue"
+    leftBottom: "R. oben → rollos-oben"
+  rollo-room_a:
+    titel: "Rollo RoomA"
+    topLeft: "Hoch → rollo.room_a"
+    topRight: "Runter → rollo.room_a"
+    bottomLeft: "Stopp → rollo.room_a"
+    leftTop: "Übersicht → rollos-oben"
+    leftBottom: "RoomB → rollo-room_b"
+  rollo-room_b:
+    titel: "Rollo RoomB"
+    topLeft: "Hoch → rollo.room_b"
+    topRight: "Runter → rollo.room_b"
+    bottomLeft: "Stopp → rollo.room_b"
+    leftTop: "Übersicht → rollos-oben"
+    leftBottom: "Schlaf → rollo-schlaf"
+  rollo-schlaf:
+    titel: "Rollo Schlaf"
+    topLeft: "Hoch → rollo.schlafzimmer"
+    topRight: "Runter → rollo.schlafzimmer"
+    bottomLeft: "Stopp → rollo.schlafzimmer"
+    leftTop: "Übersicht → rollos-oben"
+    leftBottom: "Flur → rollo-flur"
+  rollo-flur:
+    titel: "Rollo Flur"
+    topLeft: "Hoch → rollo.flur"
+    topRight: "Runter → rollo.flur"
+    bottomLeft: "Stopp → rollo.flur"
+    leftTop: "Übersicht → rollos-oben"
+    leftBottom: "RoomA → rollo-room_a"
+  rollo-kueche:
+    titel: "Rollo Küche"
+    topLeft: "Hoch → rollo.kueche"
+    topRight: "Runter → rollo.kueche"
+    bottomLeft: "Stopp → rollo.kueche"
+    leftTop: "Übersicht → rollos-unten"
+    leftBottom: "Essen → rollo-essen"
+  rollo-essen:
+    titel: "Rollo Essen"
+    topLeft: "Hoch → rollo.esszimmer"
+    topRight: "Runter → rollo.esszimmer"
+    bottomLeft: "Stopp → rollo.esszimmer"
+    leftTop: "Übersicht → rollos-unten"
+    leftBottom: "Alle → rollo-alle"
+  rollo-alle:
+    titel: "Rollo Alle"
+    topLeft: "Hoch → rollo.alle"
+    topRight: "Runter → rollo.alle"
+    bottomLeft: "Stopp → rollo.alle"
+    leftTop: "Übersicht → rollos-unten"
+    leftBottom: "Küche → rollo-kueche"
+  markise:
+    titel: "Markise"
+    topLeft: "Ein → markise.terrasse"
+    topRight: "Aus → markise.terrasse"
+    bottomLeft: "Stopp → markise.terrasse"
+    bottomRight: "Sommer → szene.sommerbeschattung"
+    leftTop: "Home → hauptmenue"
+    leftBottom: null # Keine weitere Seite in dieser Kategorie
+  szenen:
+    titel: "Szenen"
+    topLeft: "Weihn. → szene.weihnachten"
+    topRight: "Sofazeit → szene.sofazeit"
+    bottomLeft: "Sommer → szene.sommerbeschattung"
+    bottomRight: "Schlafen → szene.schlafenszeit"
+    leftTop: "Home → hauptmenue"
+    leftBottom: null # Keine weitere Seite in dieser Kategorie

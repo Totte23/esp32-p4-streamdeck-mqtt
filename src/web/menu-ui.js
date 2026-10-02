@@ -1,6 +1,6 @@
 import {basic,latin} from './font.js';
 const $=id=>document.getElementById(id);
-const slots=['topLeft','topRight','bottomLeft','bottomRight'];
+const slots=['leftTop','topLeft','topRight','leftBottom','bottomLeft','bottomRight'];
 let schema, draft, pageId, assets=new Map();
 async function request(path,options={}) {
   const r=await fetch(path,{...options,headers:{'X-Deck-Request':'1',...options.headers}});
@@ -69,7 +69,8 @@ function draw(canvas,b) {
 function preview() {
   if(!draft) return;
   const p=draft.pages[pageId];$('menu-preview').replaceChildren();$('menu-page').value=pageId;
-  [null,'topLeft','topRight',null,'bottomLeft','bottomRight'].forEach((slot,index)=>{
+  slots.forEach((name,index)=>{
+    const slot=(index===0||index===3)&&!Object.hasOwn(p.buttons,name)?null:name;
     const b=slot?p.buttons[slot]:null,el=document.createElement('button'),c=document.createElement('canvas');c.width=c.height=80;
     const destination=slot?b?.onPress?.page:index===0?p.next:p.previous;
     el.title=slot?(b?.labels?.bottom||b?.id||'Leer'):(index===0?`${p.title} – Weiter`:'Zurück · 2 Sekunden halten: Hauptmenü');

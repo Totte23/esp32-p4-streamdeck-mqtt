@@ -136,7 +136,7 @@ bool menu_image(uint8_t key,uint8_t *bmp,void *context)
     xSemaphoreTake(lock,portMAX_DELAY);
     if(!config) {xSemaphoreGive(lock);return false;}
     const cJSON *p=page(),*b=menu_button(p,key);
-    if(key==0||key==3) {
+    if((key==0||key==3)&&!b) {
         tile_background(bmp,0x243447);tile_arrow(bmp,key==0);
         if(key==0) {
             // Page title above the arrow; split at a word boundary into two lines.
@@ -208,7 +208,8 @@ static void handle_key(uint8_t key,uint32_t configuration,uint32_t connection)
     if(configuration!=atomic_load(&configuration_generation)) {xSemaphoreGive(lock);return;}
     last_activity_us=esp_timer_get_time();
     const cJSON *p=page(),*action=menu_get(menu_button(p,key),"onPress");
-    const char *target=key==0?menu_string(p,"next",""):key==3?menu_string(p,"previous",""):menu_string(action,"page","");
+    const cJSON *button=menu_button(p,key);
+    const char *target=button?menu_string(action,"page",""):key==0?menu_string(p,"next",""):key==3?menu_string(p,"previous",""):"";
     if(*target) {snprintf(current,sizeof(current),"%s",target);changed=true;}
     else if(menu_get(action,"entity")) request=cJSON_Duplicate(action,true);
     else snprintf(command,sizeof(command),"%s",menu_string(action,"command",""));

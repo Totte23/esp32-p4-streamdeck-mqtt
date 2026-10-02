@@ -870,6 +870,420 @@
                     "type": "null"
                   }
                 ]
+              },
+              "leftTop": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                      },
+                      "icon": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_-]{1,32}(\\.(svg|png))?$"
+                      },
+                      "iconSize": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 80
+                      },
+                      "fontSize": {
+                        "enum": [
+                          8,
+                          16
+                        ]
+                      },
+                      "labels": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "top": {
+                            "type": "string",
+                            "maxLength": 63
+                          },
+                          "center": {
+                            "type": "string",
+                            "maxLength": 63
+                          },
+                          "bottom": {
+                            "type": "string",
+                            "maxLength": 63
+                          }
+                        }
+                      },
+                      "background": {
+                        "type": "string",
+                        "pattern": "^#[0-9A-Fa-f]{6}$"
+                      },
+                      "textColor": {
+                        "type": "string",
+                        "pattern": "^#[0-9A-Fa-f]{6}$"
+                      },
+                      "state": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                      },
+                      "onPress": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "page": {
+                                "type": "string",
+                                "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                              }
+                            },
+                            "required": [
+                              "page"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "command": {
+                                "type": "string",
+                                "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                              }
+                            },
+                            "required": [
+                              "command"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "entity": {
+                                "type": "string",
+                                "maxLength": 63,
+                                "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)+$"
+                              },
+                              "action": {
+                                "enum": [
+                                  "toggle",
+                                  "up",
+                                  "down",
+                                  "stop",
+                                  "slatUp",
+                                  "slatDown",
+                                  "tilt",
+                                  "trigger"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "entity",
+                              "action"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "entity": {
+                                "type": "string",
+                                "maxLength": 63,
+                                "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)+$"
+                              },
+                              "action": {
+                                "enum": [
+                                  "set"
+                                ]
+                              },
+                              "value": {
+                                "type": "boolean"
+                              }
+                            },
+                            "required": [
+                              "entity",
+                              "action",
+                              "value"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "entity": {
+                                "type": "string",
+                                "maxLength": 63,
+                                "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)+$"
+                              },
+                              "action": {
+                                "enum": [
+                                  "position"
+                                ]
+                              },
+                              "value": {
+                                "type": "number",
+                                "minimum": 0,
+                                "maximum": 100
+                              }
+                            },
+                            "required": [
+                              "entity",
+                              "action",
+                              "value"
+                            ]
+                          }
+                        ]
+                      },
+                      "appearance": {
+                        "type": "object",
+                        "maxProperties": 16,
+                        "propertyNames": {
+                          "type": "string",
+                          "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                        },
+                        "additionalProperties": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "background": {
+                              "type": "string",
+                              "pattern": "^#[0-9A-Fa-f]{6}$"
+                            },
+                            "textColor": {
+                              "type": "string",
+                              "pattern": "^#[0-9A-Fa-f]{6}$"
+                            },
+                            "center": {
+                              "type": "string",
+                              "maxLength": 63
+                            },
+                            "iconBackground": {
+                              "type": "string",
+                              "pattern": "^#[0-9a-fA-F]{6}$"
+                            }
+                          }
+                        }
+                      },
+                      "iconY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 79
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "leftBottom": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                      },
+                      "icon": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_-]{1,32}(\\.(svg|png))?$"
+                      },
+                      "iconSize": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 80
+                      },
+                      "fontSize": {
+                        "enum": [
+                          8,
+                          16
+                        ]
+                      },
+                      "labels": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "top": {
+                            "type": "string",
+                            "maxLength": 63
+                          },
+                          "center": {
+                            "type": "string",
+                            "maxLength": 63
+                          },
+                          "bottom": {
+                            "type": "string",
+                            "maxLength": 63
+                          }
+                        }
+                      },
+                      "background": {
+                        "type": "string",
+                        "pattern": "^#[0-9A-Fa-f]{6}$"
+                      },
+                      "textColor": {
+                        "type": "string",
+                        "pattern": "^#[0-9A-Fa-f]{6}$"
+                      },
+                      "state": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                      },
+                      "onPress": {
+                        "oneOf": [
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "page": {
+                                "type": "string",
+                                "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                              }
+                            },
+                            "required": [
+                              "page"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "command": {
+                                "type": "string",
+                                "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                              }
+                            },
+                            "required": [
+                              "command"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "entity": {
+                                "type": "string",
+                                "maxLength": 63,
+                                "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)+$"
+                              },
+                              "action": {
+                                "enum": [
+                                  "toggle",
+                                  "up",
+                                  "down",
+                                  "stop",
+                                  "slatUp",
+                                  "slatDown",
+                                  "tilt",
+                                  "trigger"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "entity",
+                              "action"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "entity": {
+                                "type": "string",
+                                "maxLength": 63,
+                                "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)+$"
+                              },
+                              "action": {
+                                "enum": [
+                                  "set"
+                                ]
+                              },
+                              "value": {
+                                "type": "boolean"
+                              }
+                            },
+                            "required": [
+                              "entity",
+                              "action",
+                              "value"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "entity": {
+                                "type": "string",
+                                "maxLength": 63,
+                                "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)+$"
+                              },
+                              "action": {
+                                "enum": [
+                                  "position"
+                                ]
+                              },
+                              "value": {
+                                "type": "number",
+                                "minimum": 0,
+                                "maximum": 100
+                              }
+                            },
+                            "required": [
+                              "entity",
+                              "action",
+                              "value"
+                            ]
+                          }
+                        ]
+                      },
+                      "appearance": {
+                        "type": "object",
+                        "maxProperties": 16,
+                        "propertyNames": {
+                          "type": "string",
+                          "pattern": "^[A-Za-z0-9_.-]{1,63}$"
+                        },
+                        "additionalProperties": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "background": {
+                              "type": "string",
+                              "pattern": "^#[0-9A-Fa-f]{6}$"
+                            },
+                            "textColor": {
+                              "type": "string",
+                              "pattern": "^#[0-9A-Fa-f]{6}$"
+                            },
+                            "center": {
+                              "type": "string",
+                              "maxLength": 63
+                            },
+                            "iconBackground": {
+                              "type": "string",
+                              "pattern": "^#[0-9a-fA-F]{6}$"
+                            }
+                          }
+                        }
+                      },
+                      "iconY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 79
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               }
             }
           }

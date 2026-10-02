@@ -16,7 +16,7 @@ void menu_icon_name(const char *filename, char name[33])
 }
 const cJSON *menu_button(const cJSON *page,unsigned key)
 {
-    const char *slots[]={NULL,"topLeft","topRight",NULL,"bottomLeft","bottomRight"};
+    const char *slots[]={"leftTop","topLeft","topRight","leftBottom","bottomLeft","bottomRight"};
     return key<6 && slots[key] ? menu_get(menu_get(page,"buttons"),slots[key]) : NULL;
 }
 static bool fields(const cJSON *o,const char *allowed)
@@ -85,7 +85,7 @@ bool menu_validate(const cJSON *r,char *e,size_t cap)
         const char *links[]={"previous","next"};
         for(unsigned i=0;i<2;i++) if(!str(p,links[i],63,true)||!menu_get(pages,menu_string(p,links[i],""))) FAIL("Blätterziel fehlt oder existiert nicht.");
         const cJSON *buttons=menu_get(p,"buttons");
-        if(!fields(buttons,"|topLeft||topRight||bottomLeft||bottomRight|")) FAIL("Nur vier rechte Inhaltstasten sind erlaubt.");
+        if(!fields(buttons,"|leftTop||leftBottom||topLeft||topRight||bottomLeft||bottomRight|")) FAIL("Unbekannte Tastenposition.");
         for(const cJSON *b=buttons->child;b;b=b->next) {
             if(cJSON_IsNull(b)) continue;
             if(!fields(b,"|id||icon||iconSize||iconY||labels||fontSize||background||textColor||onPress||state||appearance|")||!str(b,"id",63,true)||!id(menu_string(b,"id",""))) FAIL("Ungültige Taste oder unbekanntes Tastenfeld.");

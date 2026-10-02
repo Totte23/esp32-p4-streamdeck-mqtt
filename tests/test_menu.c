@@ -46,8 +46,10 @@ int main(void)
  char *s=readfile("examples/menu.json"),err[160];
  assert(menu_upload(s,strlen(s),err,sizeof(err))==ESP_OK);
  assert(!strcmp(current,"hauptmenue"));assert(refreshed==1);
- press(0);assert(!strcmp(current,"licht"));press(3);assert(!strcmp(current,"hauptmenue"));
- press(1);assert(!strcmp(current,"licht"));press(1);assert(!strcmp(current,"wohnzimmer"));
+ press(0);assert(!strcmp(current,"wohnzimmer"));press(0);assert(!strcmp(current,"hauptmenue"));
+ press(2);assert(!strcmp(current,"rollos-oben"));press(2);assert(!strcmp(current,"rollo-room_b"));
+ press(3);assert(!strcmp(current,"rollo-schlaf"));press(0);assert(!strcmp(current,"rollos-oben"));
+ press(0);press(0);assert(!strcmp(current,"wohnzimmer"));
  press(1);assert(!strcmp(last_command,"licht.wohnzimmer.decke.toggle"));
  handle_key(0,atomic_load(&configuration_generation)-1,1);assert(!strcmp(current,"wohnzimmer"));
  fail_save=true;assert(menu_upload(s,strlen(s),err,sizeof(err))==ESP_FAIL);assert(!strcmp(current,"wohnzimmer"));fail_save=false;
@@ -98,12 +100,12 @@ int main(void)
  now_us++;unsigned before_idle=refreshed;return_home_if_idle();
  assert(!strcmp(current,"hauptmenue")&&refreshed==before_idle+1);
  return_home_if_idle();assert(refreshed==before_idle+1);
- press(1);assert(!strcmp(current,"licht"));now_us+=MENU_IDLE_US-1;press(1);
+ press(0);assert(!strcmp(current,"wohnzimmer"));now_us+=MENU_IDLE_US-1;press(1);
  now_us++;return_home_if_idle();assert(!strcmp(current,"wohnzimmer"));
  now_us+=MENU_IDLE_US;return_home_if_idle();assert(!strcmp(current,"hauptmenue"));
  // Navigation tile shows the current page, even when the same arrow is used.
- strcpy(current,"wohnzimmer");assert(menu_image(0,image,NULL));
- strcpy(current,"esszimmer");assert(menu_image(0,unknown,NULL));
+ strcpy(current,"wohnzimmer");assert(menu_image(3,image,NULL));
+ strcpy(current,"esszimmer");assert(menu_image(3,unknown,NULL));
  assert(memcmp(image,unknown,sizeof(image)));
  // Back acts on release; a hold returns Home once without a preceding Back.
  strcpy(current,"wohnzimmer");
@@ -116,7 +118,7 @@ int main(void)
  back.pressed=false;back.time_us=now_us;atomic_store(&back_down,false);handle_key_event(back);
  assert(!strcmp(current,"hauptmenue"));
  strcpy(current,"wohnzimmer");back.pressed=true;back.time_us=now_us;handle_key_event(back);
- back.pressed=false;back.time_us=++now_us;handle_key_event(back);assert(!strcmp(current,"licht"));
+ back.pressed=false;back.time_us=++now_us;handle_key_event(back);assert(!strcmp(current,"esszimmer"));
  // Disconnect cancels the held button; synthetic release must not navigate.
  strcpy(current,"wohnzimmer");back.pressed=true;handle_key_event(back);
  menu_key(DECK_KEYS_CANCEL,false,NULL);back.gesture=atomic_load(&gesture_generation);back.pressed=false;
