@@ -24,6 +24,8 @@ int xTaskCreate(void (*task)(void *),const char *name,unsigned stack,void *arg,u
 {(void)task;(void)name;(void)stack;(void)arg;(void)pri;(void)handle;return pdPASS;}
 esp_err_t deck_usb_refresh_images(void) {++refreshed;return ESP_OK;}
 static char last_command[64];
+static bool sleeping;
+esp_err_t deck_usb_set_sleep(bool asleep) { sleeping=asleep;return ESP_OK; }
 void mqtt_bridge_refresh(void) {}
 uint32_t mqtt_bridge_session(void) {return 1;}
 bool mqtt_bridge_command(const char *s,uint32_t session) {assert(session==1);snprintf(last_command,sizeof(last_command),"%s",s);return true;}
@@ -93,6 +95,7 @@ int main(void)
  memcpy(unknown,image,sizeof(image));tile_rgba_at(image,opaque,32,60);assert(!memcmp(unknown,image,sizeof(image)));
  // Font supports German characters, and long UTF-8 text remains inside the BMP.
  tile_background(image,0);tile_text(image,"ÄÖÜ äöü ß Küche sehr langer Text",70,2,0xffffff);assert(icon_bmp_valid(image,sizeof(image)));
+ atomic_store(&keys_down,0);
  // Idle timeout is driven only by valid key presses, not device feedback.
  strcpy(current,"wohnzimmer");now_us=1000000;press(1);
  now_us+=MENU_IDLE_US-1;return_home_if_idle();assert(!strcmp(current,"wohnzimmer"));
@@ -100,9 +103,25 @@ int main(void)
  now_us++;unsigned before_idle=refreshed;return_home_if_idle();
  assert(!strcmp(current,"hauptmenue")&&refreshed==before_idle+1);
  return_home_if_idle();assert(refreshed==before_idle+1);
+ assert(sleeping&&display_asleep);
+ char before_wake[64];strcpy(before_wake,last_command);
+ key_message_t wake={.key=1,.pressed=true,.time_us=now_us,
+     .configuration=atomic_load(&configuration_generation),.connection=1,
+     .gesture=atomic_load(&gesture_generation)};
+ handle_key_event(wake);assert(!sleeping&&!display_asleep);
+ assert(!strcmp(current,"hauptmenue")&&!strcmp(before_wake,last_command));
  press(0);assert(!strcmp(current,"wohnzimmer"));now_us+=MENU_IDLE_US-1;press(1);
  now_us++;return_home_if_idle();assert(!strcmp(current,"wohnzimmer"));
  now_us+=MENU_IDLE_US;return_home_if_idle();assert(!strcmp(current,"hauptmenue"));
+ // Lower-left wake must not run its release action or Home hold timer.
+ wake.key=3;wake.time_us=now_us;handle_key_event(wake);
+ wake.pressed=false;handle_key_event(wake);assert(!strcmp(current,"hauptmenue"));
+ assert(!display_asleep&&!back_pending);
+ // Home also sleeps, while a held key prevents the idle transition.
+ atomic_store(&keys_down,2);now_us+=MENU_IDLE_US;return_home_if_idle();assert(!display_asleep);
+ atomic_store(&keys_down,0);return_home_if_idle();assert(display_asleep);
+ wake.key=2;wake.pressed=true;wake.time_us=now_us;handle_key_event(wake);
+ assert(!display_asleep&&!strcmp(current,"hauptmenue"));
  // Navigation tile shows the current page, even when the same arrow is used.
  strcpy(current,"wohnzimmer");assert(menu_image(3,image,NULL));
  strcpy(current,"esszimmer");assert(menu_image(3,unknown,NULL));

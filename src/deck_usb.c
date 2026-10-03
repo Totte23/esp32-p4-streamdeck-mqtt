@@ -12,7 +12,7 @@
 #include "usb/usb_host.h"
 
 static const char *TAG = "deck";
-typedef enum { CMD_BRIGHTNESS, CMD_DEMO, CMD_STATUS, CMD_REFRESH } command_kind_t;
+typedef enum { CMD_BRIGHTNESS, CMD_DEMO, CMD_STATUS, CMD_REFRESH, CMD_SLEEP } command_kind_t;
 typedef struct { command_kind_t kind; uint8_t value; } command_t;
 typedef struct {
     usb_host_client_handle_t client;
@@ -23,6 +23,7 @@ typedef struct {
     bool claimed, gone, fault, cancel_started;
     bool in_busy, out_busy, ctrl_busy, out_done, ctrl_done;
     bool reset_stream, brightness_pending;
+    bool display_sleep, wake_pending;
     uint8_t brightness, pressed, toggled, dirty;
     int image_key;
     size_t page;
@@ -235,19 +236,23 @@ static void service_device(void)
         return;
     }
     if (s.out_busy || s.ctrl_busy) return;
-    if (s.brightness_pending) {
+    if (s.wake_pending && !s.dirty && s.image_key < 0 && !s.reset_stream) {
+        s.wake_pending = false; s.brightness_pending = true;
+    }
+    if (s.brightness_pending && !s.wake_pending) {
         uint8_t *p = s.control->data_buffer;
         memset(p, 0, 8 + MINI_FEATURE_BYTES);
         // HID SET_REPORT, Feature(3), report ID 5, recipient Interface.
         p[0] = 0x21; p[1] = 0x09; p[2] = 0x05; p[3] = 0x03;
         p[4] = s.interface.interface_number; p[6] = MINI_FEATURE_BYTES;
-        mini_brightness(s.brightness, p + 8);
+        mini_brightness(s.display_sleep ? 0 : s.brightness, p + 8);
         esp_err_t err = usb_host_transfer_submit_control(s.client, s.control);
         if (err != ESP_OK) { mark_fault("submit brightness", err); return; }
         s.brightness_pending = false;
         s.ctrl_busy = true; s.ctrl_started = now;
         return;
     }
+    if (s.display_sleep) return; // Keep input polling alive, stop display traffic.
     if (s.reset_stream) {
         memset(s.output->data_buffer, 0, MINI_REPORT_BYTES);
         s.output->data_buffer[0] = 2;
@@ -282,6 +287,12 @@ static void client_task(void *arg)
         command_t command;
         while (xQueueReceive(commands, &command, 0) == pdTRUE) {
             switch (command.kind) {
+            case CMD_SLEEP:
+                s.display_sleep = command.value != 0;
+                s.wake_pending = !s.display_sleep;
+                s.brightness_pending = s.display_sleep;
+                if (!s.display_sleep) s.dirty = 0x3f;
+                break;
             case CMD_BRIGHTNESS:
                 s.brightness = command.value; s.brightness_pending = true; break;
             case CMD_DEMO:
@@ -352,6 +363,7 @@ esp_err_t deck_usb_set_brightness(uint8_t percent)
 {
     return percent <= 100 ? post(CMD_BRIGHTNESS, percent) : ESP_ERR_INVALID_ARG;
 }
+esp_err_t deck_usb_set_sleep(bool asleep) { return post(CMD_SLEEP, asleep); }
 esp_err_t deck_usb_demo(void) { return post(CMD_DEMO, 0); }
 esp_err_t deck_usb_status(void) { return post(CMD_STATUS, 0); }
 

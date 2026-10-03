@@ -24,6 +24,8 @@ static SemaphoreHandle_t lock;
 static QueueHandle_t key_queue;
 typedef struct { uint8_t key; uint32_t configuration, connection, gesture; bool pressed; int64_t time_us; } key_message_t;
 static atomic_bool back_down;
+static atomic_uint keys_down;
+static bool display_asleep; // protected by lock
 static atomic_uint gesture_generation;
 static bool back_pending, back_long;
 static key_message_t back_press;
@@ -226,9 +228,12 @@ static void return_home_if_idle(void)
     bool changed=false;
     xSemaphoreTake(lock,portMAX_DELAY);
     const char *home=menu_string(config,"startPage","");
-    if(esp_timer_get_time()-last_activity_us>=MENU_IDLE_US && strcmp(current,home)) {
+    if(!display_asleep && !atomic_load(&keys_down) &&
+       esp_timer_get_time()-last_activity_us>=MENU_IDLE_US && deck_usb_set_sleep(true)==ESP_OK) {
+        display_asleep=true;
         snprintf(current,sizeof(current),"%s",home);
         changed=true;
+        ESP_LOGI("menu","Display sleeping after 180 seconds idle");
     }
     xSemaphoreGive(lock);
     if(changed) deck_usb_refresh_images();
@@ -247,6 +252,22 @@ static void hold_home(void)
 }
 static void handle_key_event(key_message_t event)
 {
+    // The wake press never navigates or publishes an action. Ignore its release too.
+    xSemaphoreTake(lock,portMAX_DELAY);
+    bool asleep=display_asleep;
+    bool valid=event.configuration==atomic_load(&configuration_generation) &&
+               event.gesture==atomic_load(&gesture_generation);
+    if(asleep && valid && event.pressed) {
+        snprintf(current,sizeof(current),"%s",menu_string(config,"startPage",""));
+        last_activity_us=event.time_us;
+        if(deck_usb_set_sleep(false)==ESP_OK) {
+            display_asleep=false;
+            ESP_LOGI("menu","Display awake at Home; wake key consumed");
+        }
+        back_pending=false;
+    }
+    xSemaphoreGive(lock);
+    if(asleep) return;
     if(back_pending && back_press.gesture!=atomic_load(&gesture_generation)) back_pending=false;
     if(event.key!=3) {handle_key(event.key,event.configuration,event.connection);return;}
     if(event.gesture!=atomic_load(&gesture_generation)) {back_pending=false;return;}
@@ -285,9 +306,11 @@ void menu_key(uint8_t key,bool pressed,void *context)
 {
     (void)context;
     if(key==DECK_KEYS_CANCEL) {
-        atomic_store(&back_down,false);atomic_fetch_add(&gesture_generation,1);return;
+        atomic_store(&keys_down,0);atomic_store(&back_down,false);atomic_fetch_add(&gesture_generation,1);return;
     }
     if(key>=6||!key_queue) return;
+    if(pressed) atomic_fetch_or(&keys_down,1u<<key);
+    else atomic_fetch_and(&keys_down,~(1u<<key));
     if(key==3) atomic_store(&back_down,pressed);
     // Only Back needs release events. Other buttons still act immediately on DOWN.
     if(!pressed&&key!=3) return;
@@ -316,5 +339,6 @@ esp_err_t menu_init(void)
     if(!config) config=parse((const char *)default_menu_start,default_menu_end-default_menu_start,error,sizeof(error));
     if(!config) return ESP_FAIL;
     snprintf(current,sizeof(current),"%s",menu_string(config,"startPage",""));
+    last_activity_us=esp_timer_get_time();
     return xTaskCreate(worker,"menu",6144,NULL,4,NULL)==pdPASS?ESP_OK:ESP_ERR_NO_MEM;
 }

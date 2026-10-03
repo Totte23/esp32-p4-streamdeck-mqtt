@@ -10,6 +10,8 @@ typedef void (*deck_key_callback_t)(uint8_t key, bool pressed, void *context);
 esp_err_t deck_usb_start(deck_key_callback_t callback, void *context);
 // Thread-safe asynchronous commands. Return ESP_ERR_TIMEOUT if queue is full.
 esp_err_t deck_usb_set_brightness(uint8_t percent);
+// Preserve configured brightness; wake redraws before restoring the backlight.
+esp_err_t deck_usb_set_sleep(bool asleep);
 esp_err_t deck_usb_demo(void);
 esp_err_t deck_usb_status(void);
 

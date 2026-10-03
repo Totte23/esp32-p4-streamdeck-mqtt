@@ -130,6 +130,23 @@ int main(void)
         assert(pages <= 140);
     } while (s.out_busy || s.dirty || s.image_key >= 0);
     assert(pages == 140); // Six original tiles plus the changed first tile.
+    // Backlight off stops image traffic but leaves key polling running.
+    s.display_sleep = true; s.brightness_pending = true; s.dirty = 0x3f;
+    service_device(); assert(s.ctrl_busy && s.control->data_buffer[13] == 0);
+    complete(s.control, USB_TRANSFER_STATUS_COMPLETED); service_device();
+    assert(s.in_busy && !s.out_busy && s.dirty == 0x3f);
+    s.brightness = 65; // An adjustment during sleep must be restored on wake.
+    s.display_sleep = false; s.wake_pending = true;
+    unsigned wake_pages = 0;
+    while (!s.ctrl_busy) {
+        service_device();
+        if (s.out_busy) { complete(s.output, USB_TRANSFER_STATUS_COMPLETED); ++wake_pages; }
+        assert(wake_pages <= 120);
+    }
+    assert(wake_pages == 120 && s.control->data_buffer[13] == 65);
+    complete(s.control, USB_TRANSFER_STATUS_COMPLETED); service_device();
+    assert(!s.wake_pending && !s.out_busy);
+
     removed(); close_removed(); assert(s.device && releases == 0 && allocations == 3);
     complete(s.input, USB_TRANSFER_STATUS_CANCELED);
     close_removed(); assert(!s.device && !allocations && releases == 1 && closes == 1);
