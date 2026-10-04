@@ -169,7 +169,8 @@ bool menu_image(uint8_t key,uint8_t *bmp,void *context)
         const cJSON *labels=menu_get(b,"labels");
         const char *positions[]={"top","center","bottom"};
         unsigned scale=font?font->valueint/8:1;
-        int ys[]={3,40-(int)scale*4,75-(int)scale*8};
+        const cJSON *center_y=menu_get(b,"centerY");
+        int ys[]={3,center_y?center_y->valueint:40-(int)scale*4,75-(int)scale*8};
         for(unsigned i=0;i<3;i++) {
             const char *s=menu_string(labels,positions[i],"");
             if(i==1) s=menu_string(ap,"center",s);

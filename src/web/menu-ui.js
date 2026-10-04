@@ -39,6 +39,7 @@ export function validateMenu(menu,s) {
   if(!Object.hasOwn(menu.pages,menu.startPage)) throw Error('startPage existiert nicht.');
   for(const [id,p] of Object.entries(menu.pages)) {
     for(const b of Object.values(p.buttons)) if(b && b.iconY!==undefined && b.iconY+(b.iconSize??48)>80) throw Error(`${id}: Icon liegt außerhalb der Taste.`);
+    for(const b of Object.values(p.buttons)) if(b && b.centerY!==undefined && b.centerY+(b.fontSize??8)>80) throw Error(`${id}: Statuszeile liegt außerhalb der Taste.`);
     for(const target of [p.previous,p.next,...Object.values(p.buttons).map(b=>b?.onPress?.page).filter(Boolean)])
       if(!Object.hasOwn(menu.pages,target)) throw Error(`${id}: Zielseite ${target} fehlt.`);
   }
@@ -60,7 +61,7 @@ function draw(canvas,b) {
   if(assets.has(name)) {
     const s=b.iconSize||48;if(style.iconBackground){ctx.fillStyle=style.iconBackground;ctx.fillRect((80-s)/2-1,(b.iconY??(80-s)/2)-1,s+2,s+2);}ctx.imageSmoothingEnabled=false;ctx.drawImage(assets.get(name),(80-s)/2,b.iconY??(80-s)/2,s,s);
   }
-  const size=b?.fontSize||8,ys=[3,40-size/2,75-size];
+  const size=b?.fontSize||8,ys=[3,b?.centerY??40-size/2,75-size];
   ['top','center','bottom'].forEach((p,i)=>{
     const value=(p==='center'?style.center??b?.labels?.[p]:b?.labels?.[p])||'';
     text(ctx,value.replaceAll('{value}',$('menu-value').value),ys[i],size,style.textColor||b?.textColor||'#ffffff');

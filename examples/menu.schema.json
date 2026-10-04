@@ -239,6 +239,11 @@
                         "type": "integer",
                         "minimum": 0,
                         "maximum": 79
+                      },
+                      "centerY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 72
                       }
                     },
                     "required": [
@@ -446,6 +451,11 @@
                         "type": "integer",
                         "minimum": 0,
                         "maximum": 79
+                      },
+                      "centerY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 72
                       }
                     },
                     "required": [
@@ -653,6 +663,11 @@
                         "type": "integer",
                         "minimum": 0,
                         "maximum": 79
+                      },
+                      "centerY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 72
                       }
                     },
                     "required": [
@@ -860,6 +875,11 @@
                         "type": "integer",
                         "minimum": 0,
                         "maximum": 79
+                      },
+                      "centerY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 72
                       }
                     },
                     "required": [
@@ -1067,6 +1087,11 @@
                         "type": "integer",
                         "minimum": 0,
                         "maximum": 79
+                      },
+                      "centerY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 72
                       }
                     },
                     "required": [
@@ -1274,6 +1299,11 @@
                         "type": "integer",
                         "minimum": 0,
                         "maximum": 79
+                      },
+                      "centerY": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 72
                       }
                     },
                     "required": [

@@ -88,7 +88,7 @@ bool menu_validate(const cJSON *r,char *e,size_t cap)
         if(!fields(buttons,"|leftTop||leftBottom||topLeft||topRight||bottomLeft||bottomRight|")) FAIL("Unbekannte Tastenposition.");
         for(const cJSON *b=buttons->child;b;b=b->next) {
             if(cJSON_IsNull(b)) continue;
-            if(!fields(b,"|id||icon||iconSize||iconY||labels||fontSize||background||textColor||onPress||state||appearance|")||!str(b,"id",63,true)||!id(menu_string(b,"id",""))) FAIL("Ungültige Taste oder unbekanntes Tastenfeld.");
+            if(!fields(b,"|id||icon||iconSize||iconY||centerY||labels||fontSize||background||textColor||onPress||state||appearance|")||!str(b,"id",63,true)||!id(menu_string(b,"id",""))) FAIL("Ungültige Taste oder unbekanntes Tastenfeld.");
             const char *is=menu_string(b,"icon","");char name[33];menu_icon_name(is,name);
             size_t iconlen=strlen(is);
             if(iconlen>4&&(!strcmp(is+iconlen-4,".svg")||!strcmp(is+iconlen-4,".png"))) iconlen-=4;
@@ -99,6 +99,8 @@ bool menu_validate(const cJSON *r,char *e,size_t cap)
             const cJSON *top=menu_get(b,"iconY");
             if(top&&(!cJSON_IsNumber(top)||top->valuedouble<0||top->valueint!=top->valuedouble||top->valuedouble>80-(size?size->valueint:48))) FAIL("iconY und iconSize müssen innerhalb 80 Pixel bleiben.");
             if(font&&(!cJSON_IsNumber(font)||(font->valuedouble!=8&&font->valuedouble!=16))) FAIL("fontSize: 8 oder 16 Pixel.");
+            const cJSON *center_y=menu_get(b,"centerY");
+            if(center_y&&(!cJSON_IsNumber(center_y)||center_y->valueint!=center_y->valuedouble||center_y->valuedouble<0||center_y->valuedouble>80-(font?font->valueint:8))) FAIL("centerY: Statuszeile muss innerhalb der Taste bleiben.");
             if(!str(b,"state",63,false)||(*menu_string(b,"state","")&&!id(menu_string(b,"state","")))) FAIL("Ungültige Status-ID.");
             const cJSON *a=menu_get(b,"onPress");
             if(a) {

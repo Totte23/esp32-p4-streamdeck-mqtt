@@ -132,8 +132,9 @@
             }
           },
           "icon": "color_bulb_orange.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "topRight": {
           "id": "leselampe",
@@ -162,8 +163,9 @@
             }
           },
           "icon": "color_bulb_orange.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomLeft": {
           "id": "sofazeit",
@@ -192,8 +194,9 @@
             }
           },
           "icon": "color_wohnzimmer.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomRight": {
           "id": "weihnachten",
@@ -222,8 +225,9 @@
             }
           },
           "icon": "color_christmas.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "leftTop": {
           "id": "wohnzimmer-home",
@@ -288,8 +292,9 @@
             }
           },
           "icon": "color_bulb_orange.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "topRight": {
           "id": "kuechenlicht-1",
@@ -318,8 +323,9 @@
             }
           },
           "icon": "color_bulb_orange.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomLeft": {
           "id": "kuechenlicht-2",
@@ -348,8 +354,9 @@
             }
           },
           "icon": "color_bulb_orange.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomRight": {
           "id": "licht",
@@ -378,8 +385,9 @@
             }
           },
           "icon": "color_bulb_orange.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "leftTop": {
           "id": "esszimmer-home",
@@ -444,8 +452,9 @@
             }
           },
           "icon": "color_bulb_orange.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "topRight": {
           "id": "licht",
@@ -474,8 +483,9 @@
             }
           },
           "icon": "color_bulb_orange.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomLeft": null,
         "bottomRight": null,
@@ -654,7 +664,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -667,7 +678,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -680,7 +692,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": {
           "id": "lamellen",
@@ -741,7 +754,8 @@
             "action": "slatUp"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "schritt--",
@@ -754,7 +768,8 @@
             "action": "slatDown"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": null,
         "bottomRight": null,
@@ -805,7 +820,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -818,7 +834,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -831,7 +848,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": {
           "id": "lamellen",
@@ -892,7 +910,8 @@
             "action": "slatUp"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "schritt--",
@@ -905,7 +924,8 @@
             "action": "slatDown"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": null,
         "bottomRight": null,
@@ -956,7 +976,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -969,7 +990,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -982,7 +1004,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": {
           "id": "lamellen",
@@ -1043,7 +1066,8 @@
             "action": "slatUp"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "schritt--",
@@ -1056,7 +1080,8 @@
             "action": "slatDown"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": null,
         "bottomRight": null,
@@ -1107,7 +1132,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -1120,7 +1146,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -1133,7 +1160,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": {
           "id": "lamellen",
@@ -1194,7 +1222,8 @@
             "action": "slatUp"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "schritt--",
@@ -1207,7 +1236,8 @@
             "action": "slatDown"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": null,
         "bottomRight": null,
@@ -1258,7 +1288,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -1271,7 +1302,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -1284,7 +1316,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": {
           "id": "kippen",
@@ -1297,7 +1330,8 @@
             "action": "tilt"
           },
           "icon": "color_shutter.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "leftTop": {
           "id": "raffstore-alle-home",
@@ -1593,7 +1627,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -1606,7 +1641,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -1619,7 +1655,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": null,
         "leftTop": {
@@ -1669,7 +1706,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -1682,7 +1720,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -1695,7 +1734,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": null,
         "leftTop": {
@@ -1745,7 +1785,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -1758,7 +1799,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -1771,7 +1813,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": null,
         "leftTop": {
@@ -1821,7 +1864,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -1834,7 +1878,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -1847,7 +1892,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": null,
         "leftTop": {
@@ -1897,7 +1943,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -1910,7 +1957,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -1923,7 +1971,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": null,
         "leftTop": {
@@ -1973,7 +2022,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -1986,7 +2036,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -1999,7 +2050,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": null,
         "leftTop": {
@@ -2049,7 +2101,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "runter",
@@ -2062,7 +2115,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -2075,7 +2129,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": null,
         "leftTop": {
@@ -2125,7 +2180,8 @@
             "action": "up"
           },
           "icon": "color_up.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "topRight": {
           "id": "ausfahren",
@@ -2138,7 +2194,8 @@
             "action": "down"
           },
           "icon": "color_down.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomLeft": {
           "id": "stopp",
@@ -2151,7 +2208,8 @@
             "action": "stop"
           },
           "icon": "color_stop.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": {
           "id": "sommer",
@@ -2164,7 +2222,8 @@
             "action": "trigger"
           },
           "icon": "color_sun.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "leftTop": {
           "id": "markise-home",
@@ -2215,8 +2274,9 @@
             }
           },
           "icon": "color_christmas.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "topRight": {
           "id": "sofazeit",
@@ -2245,8 +2305,9 @@
             }
           },
           "icon": "color_wohnzimmer.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomLeft": {
           "id": "sommer",
@@ -2259,7 +2320,8 @@
             "action": "trigger"
           },
           "icon": "color_sun.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": {
           "id": "schlafenszeit",
@@ -2268,11 +2330,12 @@
           },
           "fontSize": 8,
           "icon": "color_bed.png",
-          "iconSize": 48,
+          "iconSize": 56,
           "onPress": {
             "entity": "szene.schlafenszeit",
             "action": "trigger"
-          }
+          },
+          "iconY": 9
         },
         "leftTop": {
           "id": "szenen-home",
