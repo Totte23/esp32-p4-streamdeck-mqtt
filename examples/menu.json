@@ -11,8 +11,8 @@
         "leftTop": {
           "id": "home-light",
           "icon": "color_bulb_orange.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "top": "",
             "bottom": "Licht"
@@ -26,8 +26,8 @@
         "topLeft": {
           "id": "home-raff",
           "icon": "color_shutter.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "top": "",
             "bottom": "Raffst."
@@ -41,8 +41,8 @@
         "topRight": {
           "id": "home-upper",
           "icon": "color_rollo.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "top": "",
             "bottom": "R. oben"
@@ -56,8 +56,8 @@
         "leftBottom": {
           "id": "home-scenes",
           "icon": "color_szenen.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "top": "",
             "bottom": "Szenen"
@@ -71,8 +71,8 @@
         "bottomLeft": {
           "id": "home-summer",
           "icon": "color_markise.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "top": "",
             "bottom": "Markise"
@@ -86,8 +86,8 @@
         "bottomRight": {
           "id": "home-lower",
           "icon": "color_rollo.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "top": "",
             "bottom": "R. unten"
@@ -232,8 +232,8 @@
         "leftTop": {
           "id": "wohnzimmer-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Home"
           },
@@ -392,8 +392,8 @@
         "leftTop": {
           "id": "esszimmer-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Home"
           },
@@ -492,8 +492,8 @@
         "leftTop": {
           "id": "garten-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Home"
           },
@@ -545,8 +545,9 @@
             }
           },
           "icon": "color_shutter.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "topRight": {
           "id": "mitte",
@@ -568,8 +569,9 @@
             }
           },
           "icon": "color_shutter.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomLeft": {
           "id": "links",
@@ -591,8 +593,9 @@
             }
           },
           "icon": "color_shutter.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomRight": {
           "id": "rechts",
@@ -614,14 +617,15 @@
             }
           },
           "icon": "color_shutter.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "leftTop": {
           "id": "raffstores-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Home"
           },
@@ -634,8 +638,8 @@
         "leftBottom": {
           "id": "raff-all",
           "icon": "color_shutter.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "top": "",
             "bottom": "Alle"
@@ -705,13 +709,14 @@
             "page": "raffstore-oben-lamellen"
           },
           "icon": "color_shutter.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "leftTop": {
           "id": "raffstore-oben-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -776,8 +781,8 @@
         "leftTop": {
           "id": "raffstore-oben-lamellen-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -861,13 +866,14 @@
             "page": "raffstore-mitte-lamellen"
           },
           "icon": "color_shutter.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "leftTop": {
           "id": "raffstore-mitte-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -932,8 +938,8 @@
         "leftTop": {
           "id": "raffstore-mitte-lamellen-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1017,13 +1023,14 @@
             "page": "raffstore-links-lamellen"
           },
           "icon": "color_shutter.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "leftTop": {
           "id": "raffstore-links-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1088,8 +1095,8 @@
         "leftTop": {
           "id": "raffstore-links-lamellen-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1173,13 +1180,14 @@
             "page": "raffstore-rechts-lamellen"
           },
           "icon": "color_shutter.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "leftTop": {
           "id": "raffstore-rechts-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1244,8 +1252,8 @@
         "leftTop": {
           "id": "raffstore-rechts-lamellen-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1336,8 +1344,8 @@
         "leftTop": {
           "id": "raffstore-alle-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1393,8 +1401,9 @@
             }
           },
           "icon": "color_child.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "topRight": {
           "id": "room_b",
@@ -1420,8 +1429,9 @@
             }
           },
           "icon": "color_child.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomLeft": {
           "id": "schlaf",
@@ -1447,8 +1457,9 @@
             }
           },
           "icon": "color_bed.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomRight": {
           "id": "flur",
@@ -1474,14 +1485,15 @@
             }
           },
           "icon": "color_flur.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "leftTop": {
           "id": "rollos-oben-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Home"
           },
@@ -1537,8 +1549,9 @@
             }
           },
           "icon": "color_kueche.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "topRight": {
           "id": "esszimmer",
@@ -1564,8 +1577,9 @@
             }
           },
           "icon": "color_esszimmer.png",
-          "iconSize": 32,
-          "iconY": 3
+          "iconSize": 48,
+          "iconY": 6,
+          "centerY": 55
         },
         "bottomLeft": {
           "id": "alle",
@@ -1577,14 +1591,15 @@
             "page": "rollo-alle"
           },
           "icon": "color_home.png",
-          "iconSize": 48
+          "iconSize": 56,
+          "iconY": 9
         },
         "bottomRight": null,
         "leftTop": {
           "id": "rollos-unten-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Home"
           },
@@ -1662,8 +1677,8 @@
         "leftTop": {
           "id": "rollo-room_a-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1741,8 +1756,8 @@
         "leftTop": {
           "id": "rollo-room_b-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1820,8 +1835,8 @@
         "leftTop": {
           "id": "rollo-schlaf-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1899,8 +1914,8 @@
         "leftTop": {
           "id": "rollo-flur-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -1978,8 +1993,8 @@
         "leftTop": {
           "id": "rollo-kueche-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -2057,8 +2072,8 @@
         "leftTop": {
           "id": "rollo-essen-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -2136,8 +2151,8 @@
         "leftTop": {
           "id": "rollo-alle-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Übersicht"
           },
@@ -2228,8 +2243,8 @@
         "leftTop": {
           "id": "markise-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Home"
           },
@@ -2340,8 +2355,8 @@
         "leftTop": {
           "id": "szenen-home",
           "icon": "color_home.png",
-          "iconSize": 40,
-          "iconY": 23,
+          "iconSize": 56,
+          "iconY": 9,
           "labels": {
             "bottom": "Home"
           },
